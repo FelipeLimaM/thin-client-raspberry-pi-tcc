@@ -1,0 +1,7 @@
+disable_overscan=1
+gpu_mem=32
+kernel=kernel_rpi.img
+initramfs berryterminal.img
+hdmi_force_hotplug=1
+hdmi_group=2
+hdmi_drive=2

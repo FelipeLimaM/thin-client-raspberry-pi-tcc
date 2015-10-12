@@ -1,0 +1,1527 @@
+% ------------------------------------------------------
+% ------------------------------------------------------------------------
+% abnTeX2: Modelo de Trabalho Academico (tese de doutorado, dissertacao de
+% mestrado e trabalhos monograficos em geral) em conformidade com 
+% ABNT NBR 14724:2011: Informacao e documentacao - Trabalhos academicos -
+% Apresentacao
+% ------------------------------------------------------------------------
+% ------------------------------------------------------------------------
+
+\documentclass[
+	% -- opções da classe memoir --
+	12pt,				% tamanho da fonte
+	openright,			% capítulos começam em pág ímpar (insere página vazia caso preciso)
+	twoside,			% para impressão em verso e anverso. Oposto a oneside
+	a4paper,			% tamanho do papel. 
+	% -- opções da classe abntex2 --
+	chapter=TITLE,		% títulos de capítulos convertidos em letras maiúsculas
+	%section=TITLE,		% títulos de seções convertidos em letras maiúsculas
+	%subsection=TITLE,	% títulos de subseções convertidos em letras maiúsculas
+	%subsubsection=TITLE,% títulos de subsubseções convertidos em letras maiúsculas
+	% -- opções do pacote babel --
+	english,			% idioma adicional para hifenização
+	brazil				% o último idioma é o principal do documento
+	]{abntex2}
+
+% ---
+% Pacotes básicos 
+% ---
+\usepackage{lmodern}			% Usa a fonte Latin Modern			
+\usepackage[T1]{fontenc}		% Selecao de codigos de fonte.
+\usepackage[utf8]{inputenc}		% Codificacao do documento (conversão automática dos acentos)
+\usepackage{lastpage}			% Usado pela Ficha catalográfica
+\usepackage{indentfirst}		% Indenta o primeiro parágrafo de cada seção.
+\usepackage{color}				% Controle das cores
+\usepackage{graphicx}			% Inclusão de gráficos
+\usepackage{microtype} 			% para melhorias de justificação
+\usepackage{hyperref}
+\usepackage{trivfloat}
+\usepackage{datetime}
+
+
+%\usepackage{listings} usado pra colocar codigo
+
+
+\trivfloat{quadro}
+
+
+
+
+
+\usepackage{novacapa}
+% ---
+		
+% ---
+% Pacotes adicionais, usados apenas no âmbito do Modelo Canônico do abnteX2
+% ---
+%\usepackage{lipsum}				% para geração de dummy text
+% ---
+
+% ---
+% Pacotes de citações
+% ---
+\usepackage[brazilian,hyperpageref]{backref}	 % Paginas com as citações na bibl
+\usepackage[alf]{abntex2cite}	% Citações padrão ABNT
+
+% --- 
+% CONFIGURAÇÕES DE PACOTES
+% --- 
+
+% ---
+% Configurações do pacote backref
+% Usado sem a opção hyperpageref de backref
+\renewcommand{\backrefpagesname}{Citado na(s) página(s):~}
+% Texto padrão antes do número das páginas
+\renewcommand{\backref}{}
+% Define os textos da citação
+\renewcommand*{\backrefalt}[4]{
+	\ifcase #1 %
+		Nenhuma citação no texto.%
+	\or
+		Citado na página #2.%
+	\else
+		Citado #1 vezes nas páginas #2.%
+	\fi}%
+% ---
+
+% ---
+% Informações de dados para CAPA e FOLHA DE ROSTO
+% ---
+\titulo{Thin Client: Com Raspberry PI}
+\autor{Felipe Lima Morais}
+\local{Dourados, MS}
+\data{2015}
+\orientador{Prof. Dr. Fabrício Sérgio de Paula}
+\instituicao{Universidade Estadual de Mato Grosso do Sul}
+
+
+\tipotrabalho{Trabalho de Conclusão de Curso em Ciência da Computação}
+% O preambulo deve conter o tipo do trabalho, o objetivo, 
+% o nome da instituição e a área de concentração 
+\preambulo{Este  exemplar  corresponde  à  redação  finalda
+monografia da disciplina Projeto Final de
+Curso devidamente corrigida e defendida
+por \imprimirautor \  e aprovada pela
+Banca  Examinadora, como parte dos
+requisitos para a obtenção do título de
+Bacharel em Ciência da Computação.}
+% ---
+
+
+% ---
+% Configurações de aparência do PDF final
+
+% alterando o aspecto da cor azul
+\definecolor{blue}{RGB}{41,5,195}
+%\definecolor{blue}{RGB}{0,0,0}
+
+% informações do PDF
+\makeatletter
+\hypersetup{
+     	%pagebackref=true,
+		pdftitle={\@title}, 
+		pdfauthor={\@author},
+    	pdfsubject={\imprimirpreambulo},
+	    pdfcreator={LaTeX with abnTeX2},
+		pdfkeywords={abnt}{latex}{abntex}{abntex2}{trabalho acadêmico}, 
+		colorlinks=false,       		% false: boxed links; true: colored links
+    	linkcolor=blue,          	% color of internal links
+    	citecolor=blue,        		% color of links to bibliography
+    	filecolor=magenta,      		% color of file links
+		urlcolor=blue,
+		bookmarksdepth=4
+}
+\makeatother
+% --- 
+
+% --- 
+% Espaçamentos entre linhas e parágrafos 
+% --- 
+
+% O tamanho do parágrafo é dado por:
+\setlength{\parindent}{1.3cm}
+
+% Controle do espaçamento entre um parágrafo e outro:
+\setlength{\parskip}{0.2cm}  % tente também \onelineskip
+
+
+
+\renewcommand{\imprimircapa}{%     CAPA MODELO DE CIÊNCIA DA COMPUTAÇÂO
+\begin{capa}%
+	\center
+	
+
+	\begin{tabular}{@{}c@{}}
+	\toprule
+	Curso de Ciência da Computação            \\
+	\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Universidade Estadual de Mato Grosso do Sul\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  \\ \bottomrule
+	\end{tabular}
+
+	
+	
+	
+	\vspace*{\fill}
+	\begin{center}
+		\ABNTEXchapterfont\bfseries\LARGE\imprimirtitulo
+	\end{center}
+
+	\vspace*{\fill} 
+	{\large \imprimirautor}
+	\\
+	\vspace*{\fill}
+	\imprimirorientador
+	\\
+	\vspace*{\fill}
+	{\large Curso de Ciência da Computação}
+	
+	Universidade Estadual de Mato Grosso do Sul
+	\\
+	\vspace*{\fill}
+	
+	\large\imprimirlocal \\
+	\large\imprimirdata
+	\vspace*{1cm}
+	
+\end{capa}
+}
+
+
+
+\makeatletter
+\renewcommand{\folhaderostocontent}{
+\begin{center}
+{\ABNTEXchapterfont\bfseries\Large\imprimirtitulo}
+\vspace*{\fill}\vspace*{\fill}
+\begin{center}
+\Large\imprimirautor
+\end{center}
+\vspace*{\fill}
+\abntex@ifnotempty{\imprimirpreambulo}{%
+\hspace{.45\textwidth}
+\begin{minipage}{.5\textwidth}
+\imprimirpreambulo \\
+\end{minipage}%
+\vspace*{\fill}
+}%
+
+
+\abntex@ifnotempty{\imprimirpreambulo}{%
+\hspace{.45\textwidth}
+\begin{minipage}{.5\textwidth}
+	\begin{center}	
+	Dourados, \today \\
+	\end{center}
+	\vspace*{2cm}
+	\begin{center}	
+	\imprimirorientador \\
+	\end{center}
+\end{minipage}%
+\vspace*{\fill}
+}%
+
+
+
+\vspace*{1cm}
+\end{center}
+}
+\makeatother
+
+
+
+
+
+
+% ---
+% compila o indice
+% ---
+\makeindex
+% ---
+
+% ----
+% Início do documento
+% ----
+\begin{document}
+
+% Seleciona o idioma do documento (conforme pacotes do babel)
+%\selectlanguage{english}
+\selectlanguage{brazil}
+
+% Retira espaço extra obsoleto entre as frases.
+\frenchspacing 
+
+% ----------------------------------------------------------
+% ELEMENTOS PRÉ-TEXTUAIS
+% ----------------------------------------------------------
+% \pretextual
+
+% ---
+% Capa
+% ---
+\imprimircapa %default antex2 
+
+
+
+
+
+% ---
+
+% ---
+% Folha de ros
+% (o * indica que haverá a ficha bibliográfica)
+% ---
+\imprimirfolhaderosto*
+% ---
+
+% ------------------------------------------------------------------------------------------------------------
+% Inserir a ficha bibliografica
+% -----------------------------------------------------------------------------------------------------------
+
+% Isto é um exemplo de Ficha Catalográfica, ou ``Dados internacionais de
+% catalogação-na-publicação''. Você pode utilizar este modelo como referência. 
+% Porém, provavelmente a biblioteca da sua universidade lhe fornecerá um PDF
+% com a ficha catalográfica definitiva após a defesa do trabalho. Quando estiver
+% com o documento, salve-o como PDF no diretório do seu projeto e substitua todo
+% o conteúdo de implementação deste arquivo pelo comando abaixo:
+%
+% \begin{fichacatalografica}
+%     \includepdf{fig_ficha_catalografica.pdf}
+% \end{fichacatalografica}
+
+% 																Area comentada 
+%\begin{fichacatalografica}
+%	\sffamily
+%	\vspace*{\fill}					% Posição vertical
+%	\begin{center}					% Minipage Centralizado
+%	\fbox{\begin{minipage}[c][8cm]{13.5cm}		% Largura
+%	\small
+%	MORAIS, Felipe Lima.
+%	%Sobrenome, Nome do autor
+%	
+%	\hspace{0.5cm} \imprimirtitulo. \\
+%
+%	\hspace{0.5cm} \parbox[t]{\textwidth}{\imprimirtipotrabalho. \imprimirlocal. \\
+%	\imprimirinstituicao, \imprimirdata.}\\
+%	
+%	\hspace{8.75cm} CDD: 02:141:005.7\\
+%	\end{minipage}}
+%	\end{center}
+%\end{fichacatalografica}
+
+
+
+% -----------------------------------------------------------------------------------------------------------
+% Fim ficha bibliografica
+% -----------------------------------------------------------------------------------------------------------
+
+
+
+% -----------------------------------------------------------------------------------------------------------
+% Inserir folha de aprovação
+% -----------------------------------------------------------------------------------------------------------
+
+% Isto é um exemplo de Folha de aprovação, elemento obrigatório da NBR
+% 14724/2011 (seção 4.2.1.3). Você pode utilizar este modelo até a aprovação
+% do trabalho. Após isso, substitua todo o conteúdo deste arquivo por uma
+% imagem da página assinada pela banca com o comando abaixo:
+%
+% \includepdf{folhadeaprovacao_final.pdf}
+%
+
+%																	Area comentada
+%\begin{folhadeaprovacao}
+%
+%  \begin{center}
+%    {\ABNTEXchapterfont\large\imprimirautor}
+%
+%    \vspace*{\fill}\vspace*{\fill}
+%    \begin{center}
+%      \ABNTEXchapterfont\bfseries\Large\imprimirtitulo
+%    \end{center}
+%    \vspace*{\fill}
+%    
+%    \hspace{.45\textwidth}
+%    \begin{minipage}{.5\textwidth}
+%        \imprimirpreambulo
+%    \end{minipage}%
+%    \vspace*{\fill}
+%   \end{center}
+%        
+%   Trabalho aprovado. \imprimirlocal, \imprimirdata:
+%
+%   \assinatura{\textbf{\imprimirorientador} \\ Orientador} 
+%   \assinatura{\textbf{Professor} \\ Convidado 1}
+%   \assinatura{\textbf{Professor} \\ Convidado 2}
+%      
+%   \begin{center}
+%    \vspace*{0.5cm}
+%    {\large\imprimirlocal}
+%    \par
+%    {\large\imprimirdata}
+%    \vspace*{1cm}
+%  \end{center}
+%  
+%\end{folhadeaprovacao}
+
+% -----------------------------------------------------------------------------------------------------------
+% Fim folha de aprovação
+% -----------------------------------------------------------------------------------------------------------
+
+
+
+% -----------------------------------------------------------------------------------------------------------
+% Dedicatória
+% -----------------------------------------------------------------------------------------------------------
+
+%\begin{dedicatoria}
+%   \vspace*{\fill}
+%   \centering
+%   \noindent
+%   \textit{DEDICATORIA PRA QUEM QUISER} \vspace*{\fill} %TODO
+%\end{dedicatoria}
+
+% -----------------------------------------------------------------------------------------------------------
+% Fim Dedicatória
+% -----------------------------------------------------------------------------------------------------------
+
+
+
+% -----------------------------------------------------------------------------------------------------------
+% Agradecimentos
+% -----------------------------------------------------------------------------------------------------------
+
+%\begin{agradecimentos}
+%Os agradecimentos principais são direcionados à mim. %TODO
+%\end{agradecimentos}
+
+% -----------------------------------------------------------------------------------------------------------
+% Fim Agradecimentos
+% -----------------------------------------------------------------------------------------------------------
+
+
+
+% -----------------------------------------------------------------------------------------------------------
+% Epígrafe
+% -----------------------------------------------------------------------------------------------------------
+
+%\begin{epigrafe}
+%    \vspace*{\fill}
+%	\begin{flushright}
+%		\textit{"Não vos amoldeis às estruturas deste mundo, \\
+%		mas transformai-vos pela renovação da mente, \\
+%		a fim de distinguir qual é a vontade de Deus: \\
+%		o que é bom, o que Lhe é agradável, o que é perfeito."\\
+%		(Bíblia Sagrada, Romanos 12, 2)}
+%	\end{flushright}
+%\end{epigrafe}
+
+% -----------------------------------------------------------------------------------------------------------
+% Fim Epígrafe
+% -----------------------------------------------------------------------------------------------------------
+
+
+
+% -----------------------------------------------------------------------------------------------------------
+% Resumos
+% -----------------------------------------------------------------------------------------------------------
+
+% resumo em português
+\setlength{\absparsep}{18pt} % ajusta o espaçamento dos parágrafos do resumo
+\begin{resumo}
+Este trabalho realiza um estudo sobre o uso do Raspberry PI com Thin Client/cliente magro. O Raspberry PI é um computador do tamanho de um cartão de credito que foi desenvolvido para....
+
+(TERMINAR ....)
+
+
+ \textbf{Palavras-chave}: Conexão Cliente/Servidor. Linux. Rede Local.	%TODO
+\end{resumo}
+
+% resumo em inglês
+\begin{resumo}[Abstract]
+ \begin{otherlanguage*}{english}
+   Thin client is a system of low cost, for access, the computers.
+
+   \vspace{\onelineskip}
+ 
+   \noindent 
+   \textbf{Keywords}: conection client/server. Linux. LAN.
+ \end{otherlanguage*}
+\end{resumo}
+
+% -----------------------------------------------------------------------------------------------------------
+% Fim Resumos
+% -----------------------------------------------------------------------------------------------------------
+
+
+
+% -----------------------------------------------------------------------------------------------------------
+% inserir o súmario
+% -----------------------------------------------------------------------------------------------------------
+
+\pdfbookmark[0]{\contentsname}{toc}
+\tableofcontents*
+\cleardoublepage
+
+% -----------------------------------------------------------------------------------------------------------
+% Fim súmario
+% -----------------------------------------------------------------------------------------------------------
+
+
+
+% -----------------------------------------------------------------------------------------------------------
+% inserir lista de ilustrações
+% -----------------------------------------------------------------------------------------------------------
+
+\pdfbookmark[0]{\listfigurename}{lof}
+\listoffigures*
+\cleardoublepage
+
+% -----------------------------------------------------------------------------------------------------------
+% Fim lista de ilustrações
+% -----------------------------------------------------------------------------------------------------------
+
+
+
+% -----------------------------------------------------------------------------------------------------------
+% inserir lista de tabelas
+% -----------------------------------------------------------------------------------------------------------
+
+\pdfbookmark[0]{\listtablename}{lot}
+\listoftables*
+\cleardoublepage
+
+% -----------------------------------------------------------------------------------------------------------
+% Fim lista de tabelas
+% -----------------------------------------------------------------------------------------------------------
+
+
+
+% -----------------------------------------------------------------------------------------------------------
+% inserir lista de abreviaturas e siglas
+% -----------------------------------------------------------------------------------------------------------
+
+\begin{siglas}						
+  %\item[TCP] Transmission Control Protocol - Protocolo de Controle de Transmissão
+  %\item[IP] Internet Protocol - Protocolo de Internet
+  %\item[TCP/IP]  Conjunto de protocolos usados em redes de computadores
+  \item[I/O] Input/Onput
+  %\item[LAN] local area network - Rede de área local
+  \item[PC] Personal Computer
+  \item[GNU] GNU is Not Unix
+  \item[CD-ROM] Compact Disc Read-Only Memory
+  \item[CD] Compact Disc
+  \item[DHCP] Dynamic Host Configuration Protocol
+  \item[TFTP] Trivial File Transfer Protocol 
+  \item[XDMCP] X Display Manager Control Protocol
+  \item[LTSP] Linux Terminal Server Project
+  \item[DRBL] Diskless Remote Boot in Linux
+  \item[RDP] Remote Desktop Protocol
+  \item[PXE] Preboot eXecution Environment
+  \item[HD] Hard Disc
+  \item[USB] Universal Serial Bus
+  \item[RAM] Random Access Memory
+  \item[HDMI] High-Definition Multimedia Interface
+  \item[VGA] Video Graphics Array
+  \item[DDR3] Double Data Rate tipo 3
+  \item[DVI-I] Digital Visual Interface (digital e analógico)
+  \item[RJ-45] Registered Jack tipo 45
+  \item[TI] Tecnologia da Informação
+  \item[ARM] Advanced RISC Machine
+  \item[MB] MegaByte 
+  \item[mA] miliAmpère
+  \item[SD] Secure Digital
+  \item[NTSC] National Television System Committee
+  \item[PAL] Phase Alternating Line
+  \item[GPIO] General Purpose Input/Output
+  \item[MHz] MegaHertz
+  \item[GHz] GigaHertz
+  \item[RCA] Radio Corporation of America
+  \item[LCD] liquid crystal display
+  \item[GPU] Graphics Processing Unit
+  \item[GIF] Graphics Interchange Format
+  \item[DSLR] digital single-lens reflex 
+  \item[NFS] Network File System
+  \item[NIS] Network Information Service
+
+\end{siglas}
+
+% -----------------------------------------------------------------------------------------------------------
+% Fim lista de abreviaturas e siglas
+% -----------------------------------------------------------------------------------------------------------
+
+
+
+% -----------------------------------------------------------------------------------------------------------
+% inserir lista de símbolos
+% -----------------------------------------------------------------------------------------------------------
+
+%\begin{simbolos}						%TODO
+%  \item[$ \Gamma $] Letra grega Gama
+%  \item[$ \Lambda $] Lambda
+%  \item[$ \zeta $] Letra grega minúscula zeta
+%  \item[$ \in $] Pertence
+%\end{simbolos}
+
+% -----------------------------------------------------------------------------------------------------------
+% Fim lista de símbolos
+% -----------------------------------------------------------------------------------------------------------
+
+
+
+% ----------------------------------------------------------
+% ELEMENTOS TEXTUAIS
+% ----------------------------------------------------------
+\textual
+
+
+
+% -----------------------------------------------------------------------------------------------------------
+% Introdução (exemplo de capítulo sem numeração, mas presente no Sumário)
+% -----------------------------------------------------------------------------------------------------------
+
+\include{introducao}
+
+% -----------------------------------------------------------------------------------------------------------
+% Fim Introdução
+% -----------------------------------------------------------------------------------------------------------
+
+
+
+% -----------------------------------------------------------------------------------------------------------
+% Capitulo de revisão de literatura
+% -----------------------------------------------------------------------------------------------------------
+
+\part{Referencial Teórico}
+
+\chapter{thin client}
+
+\section{O que é?}
+
+O \textit{thin client} ou cliente magro são computadores que utilizam o paradigma da computação centralizada onde existe um servidor que possui todos os programas e arquivos, esse dados e programas são disponibilizados a todos os nós clientes, facilitando o \textit{backup} e a atualização desse programas. O servidor compartilha seus recursos de \textit{hardware} como HD, Mermoria RAM, CPU, entre outros.\cite{ComoFuncionaThinClient, tanenbaum2010sistemas}
+
+A ambiente de \textit{thin client} consiste em um servidor ligado a uma ou mais nós clientes. Em cada nó cliente, é requerida apenas uma quantidade mínima de recurso de \textit{hardware} para que se torne um nó cliente.\cite{TopologiaClienteThin} Um nó cliente, ou terminal burro é um computador que funciona através da rede, carregando um sistema operacional do servidor, permitindo o acesso aos  programas existentes no mesmo, a utilização desse cliente é análoga a uma computador que funciona de maneira convencional.\cite{ComoFuncionaThinClient, morimotoservidores}
+
+O recursos de \textit{hardware} disponibilizados pelo servidor, possibilitam que seus nós clientes faça operações ou executem programas sem possuir as especificações minimas de \textit{hardware} determinadas pelos \textit{software} utilizado, algo que em um computador numa estrutura convencional não seria possível.\cite{tanenbaum2010sistemas}
+
+O ambiente funciona com computadores que podem ser desprovidos de leitores de CD-ROM, unidades de disquetes e HD. Esses dispositivos acessam remotamente o servidor de \textit{thin client}, tornado o gerenciamento dos recursos centralizado, uma vez que os  arquivos e aplicações são inseridos no servidor, pois é o único que necessita de disco rígido para seu funcionamento.\cite{tanenbaum2010sistemas, ComoFuncionaThinClient}
+
+Os nós clientes fazem uma comunicação com o servidor através de uma rede local. Os usuários desta rede utilizam seus nós, o que faz parecer que eles estão utilizando computadores independentes.\cite{ComoFuncionaThinClient} Uma das características principais do \textit{thin client} é o sistema operacional utilizado não estar na maquina acessada pelos usuário, e sim no servidor. Mas os dispositivos I/O como monitor, teclado e \textit{mouse}, são componentes locais usados para o comunicação do usuário com o sistema.\cite{richards2007linux}
+
+
+\section{Sotfwares}
+
+A implementação de uma rede local com \textit{thin client}, necessita de \textit{softwares} e serviços para  disponibilizar todas as funcionalidades oferecida pelo servidor. Atualmente existe alguns pacotes de \textit{software} que oferecem a instalação e configuração base para a utilização de uma maquina como servidor.
+
+
+\subsection{LTSP}
+
+O LTSP, ou \textit{Linux Terminal Server Project} foi fundado por Jim McQuillan e Ron Colcernian em 1999, a ideia era fornecer terminais gráficos ou caracteres em um servidor GNU/Linux, como uma distribuição Linux compartilhada na rede, e acessada pelos terminais dos clientes do \textit{thin client} via NFS.\cite{piaui}. 
+
+Para um cliente LTSP funcionar é necessário estar na mesma rede do servidor e ser inicializada via rede. O servidor deve conter configurações de \textit{thin client} com o LTSP, para que os cliente LTSP possam rodam os aplicativos instados no servidor, acessando todos os \textit{softwares} diretamente do servidor.\cite{piaui}.
+
+O LTSP funciona para servidores Linux, sendo uma solução flexível, com baixo custo e eficiente, que vem sendo utilizado nas escolas, empresas e organizações de todo o mundo. O \textit{thin client} utilizando LTSP, tornou-se a tecnologia mais adotada na implementação de sistemas \textit{diskless} (sem disco), usando PCs legados para navegar na web, enviar e-mail, criar documentos, e executar outros aplicativos de \textit{desktop}, proporcionando maior vida util aos equipamentos.\cite{piaui,ltsp}
+
+
+\subsection{DRBL}
+
+DRBL ou \textit{Diskless Remote Boot in Linux} fornece um ambiente semelhante ao LTSP. Esse \textit{software} de \textit{thin client} funciona principalmente no Debian, Ubuntu, Red Hat, Fedora, CentOS e SuSE. O DRBL utiliza recursos de \textit{hardware} distribuído e os locais também, o que torna possível para os clientes ter um acesso total do \textit{hardware} local.\cite{drbl}
+
+Essa solução pode funcionar modo \textit{diskless}, ou não. O DRBL usa PXE/\textit{etherboot}, NFS e NIS em seu funcionamento, não sendo necessário instalar GNU/Linux individualmente no disco rígido de um cliente DRBL, pois o disco rígido é opcional. Se um disco rígido estiver presente, o cliente DRBL pode fazer uso dele como uma memoria de SWAP.\cite{drbl,piaui,Frank.drbl}
+
+No DRBL outros sistemas operacionais instalados (localmente) nos clientes DRBL, não serão afetados. Isto pode ser útil, por exemplo, durante uma implementação do \textit{thin client}, onde os usuários ainda possuem a opção de iniciar o sistema local e executar algumas aplicações disponíveis dentro do sistema local. O DRBL permite essa grande flexibilidade em sua implantação. \cite{drbl}
+
+
+
+%Diferentemente do LTSP, o DRBL usa recursos de hardware distribuídos e torna possível para os clientes acesso ao hardware local. Também inclui o Clonezilla, um utilitário de particionamento de disco semelhante à clonagem Symantec Ghost.[18]
+
+%\subsection{TCOS}
+
+%\url{http://www.flf.edu.br/revista-flf/monografias-computacao/monografia_artur_%20lopes.pdf}
+
+
+\subsection{Thinstation}
+
+O Thinstation é pequeno mas muito poderoso \textit{software} para ambientes que utilizam \textit{thin client}, sendo compatível com os principais protocolos de conectividade. Seu desenvolvimento foi iniciado em 2003 por iniciativa de Miles Roper, hoje é desenvolvido por vários colaboradores.\cite{Thinstationl,piaui}
+
+O Thinstation é baseado em Linux, mesmo assim é possivel se conectar diretamente a um servidor Microsoft Windows, Unix ou Citrix. Como a maioria das aplicações exige um servidor gráfico, o cliente terá um terminal que irá se conectar a um servidor para trabalhar em um ambiente gráfico, essa tecnologia é usada principalmente para salas de aulas, escritórios, empresas ou departamentos.\cite{Thinstationl}
+
+Após a instalação do Thinstation, ele irá gerar uma imagem personalizada do sistema, onde podem funcionar como clientes de um servidor ou podem trabalhar como terminais autônomos, executando um ambiente gráfico local.\cite{Thinstationl}
+
+O Thinstation roda em \textit{hardware} PC comum (classe i686 32/64 bit) e pode também se utilizar computadores antigos como clientes de um servidor, o cliente não necessidade de um disco rígido pelo fato de ser iniciado a partir da rede. E dispositivos como disquete, HD, CD, USB e impressoras ligadas diretamente aos clientes não são suportados. A última versão estável é a versão 5.4\cite{Thinstationl,piaui}
+
+
+\section{Produtos}
+
+No Brasil existe a empresa Thin Client Brasil, uma revendedora licenciada para a venda de aparelho de \textit{thin client}. O site possui alguns modelos, mas sem valor de cada produto, foi entrado em contato e forneceram uma lista com todos os preços e vários arquivos com a descrição de cada produto.  As Tabelas de  \ref{tab:incial_thin_client_brasil} a \ref{tab:final_thin_client_brasil} mostram informações sobre os produtos:
+
+ 
+\newpage
+
+ \begin{table}[h!]
+\IBGEtab{%
+	\caption{Especificação do modelo TCBR200}%
+	\label{tab:incial_thin_client_brasil}
+}{%
+\begin{tabular}{ll}\hline
+\multicolumn{2}{l}{\textbf{Especificação}}          						\\ \hline
+Processador			&ARM-A9 Dual Core 1GHz									\\
+RAM					&512MB													\\
+Chip Gráfico		&Graphics Card Type MALI400 1080P						\\
+Saida de vídeo		&VGA e HDMI												\\
+Dimensões			&11,3cm x 11,3cm x 2,4cm								\\
+Peso				&155g													\\
+Portas USB 			&3														\\
+Saída de áudio 		&1 P2													\\
+Porta de rede 		&RJ-45													\\
+Power				&DC 5v/2A												\\
+Valor		 		&R\$ 650,00												\\ \hline 					
+\end{tabular}
+}{
+	\fonte{\cite{thinclientbrasil}}%
+	%\nota{}%
+	%\nota[]{}%
+}
+\end{table}
+ 
+
+\begin{table}[h!]
+\IBGEtab{%
+	\caption{Especificação do modelo TCBR200W}%
+
+}{%
+\begin{tabular}{ll}\hline
+\multicolumn{2}{l}{\textbf{Especificação}}          						\\ \hline
+Processador			&ARM-A9 Dual Core 1GHz									\\
+RAM					&512MB													\\
+Chip Gráfico		&Graphics Card Type MALI400 1080P						\\
+Saida de vídeo		&VGA e HDMI												\\
+Dimensões			&11,3cm x 11,3cm x 2,4cm								\\
+Peso				&155g													\\
+Portas USB 			&3														\\
+Saída de áudio 		&1 P2													\\
+Porta de rede 		&RJ-45 ,Wireless(3dbi)									\\
+Power				&DC 5v/2A												\\
+Valor		 		&R\$ 699,00												\\ \hline 					
+\end{tabular}
+}{
+	\fonte{\cite{thinclientbrasil}}%
+	%\nota{}%
+	%\nota[]{}%
+}
+\end{table}
+
+
+
+\begin{table}[h!]
+\IBGEtab{%
+	\caption{Especificação do modelo NC630}%
+}{%
+\begin{tabular}{ll}\hline
+\multicolumn{2}{l}{\textbf{Especificação}}          						\\ \hline
+Processador			&ARM11 800MHz											\\
+RAM					&128MB													\\
+Chip Gráfico		&--														\\
+Saida de vídeo		&--														\\
+Dimensões			&12cm x 17cm x 3cm										\\
+Peso				&~200g													\\
+Portas USB 			&3														\\
+Saída de áudio 		&2 P2 (input e output)									\\
+Porta de rede 		&RJ-45													\\
+Valor		 		&R\$ 440,00												\\ \hline 			
+\end{tabular}
+}{
+	\fonte{\cite{thinclientbrasil}}%
+	%\nota{}%
+	%\nota[]{}%
+}
+\end{table}
+
+
+\newpage
+
+\begin{table}[h!]
+\IBGEtab{%
+	\caption{Especificação do modelo NC630W}%
+
+}{%
+\begin{tabular}{ll}\hline
+\multicolumn{2}{l}{\textbf{Especificação}}          						\\ \hline
+Processador			&ARM11 800MHz											\\
+RAM					&128MB													\\
+Chip Gráfico		&--														\\
+Saida de vídeo		&--														\\
+Dimensões			&12cm x 17cm x 3cm										\\
+Peso				&~200g													\\
+Portas USB 			&3														\\
+Saída de áudio 		&2 P2 (input e output)									\\
+Porta de rede 		&RJ-45 ,Wireless(3dbi)									\\
+Valor		 		&R\$ 510,00												\\ \hline 			
+	
+\end{tabular}
+}{
+	\fonte{\cite{thinclientbrasil}}%
+	%\nota{}%
+	%\nota[]{}%
+}
+\end{table}
+
+
+\begin{table}[h!]
+\IBGEtab{%
+
+
+	\caption{Especificação do modelo NC630}%
+}{%
+\begin{tabular}{ll}\hline
+\multicolumn{2}{l}{\textbf{Especificação}}          						\\ \hline
+Processador			&ARM11 800MHz											\\
+RAM					&128MB													\\
+Chip Gráfico		&--														\\
+Saida de vídeo		&--														\\
+Dimensões			&12cm x 17cm x 3cm										\\
+Peso				&~200g													\\
+Portas USB 			&3														\\
+Saída de áudio 		&2 P2 (input e output)									\\
+Porta de rede 		&RJ-45													\\
+Valor		 		&R\$ 440,00												\\ \hline 			
+\end{tabular}
+}{
+	\fonte{\cite{thinclientbrasil}}%
+	%\nota{}%
+	%\nota[]{}%
+}
+\end{table}
+
+\newpage
+
+\begin{table}[h!]
+\IBGEtab{%
+	\caption{Especificação do modelo NC630W}%
+
+}{%
+\begin{tabular}{ll}\hline
+\multicolumn{2}{l}{\textbf{Especificação}}          						\\ \hline
+Processador			&ARM11 800MHz											\\
+RAM					&128MB													\\
+Chip Gráfico		&--														\\
+Saida de vídeo		&--														\\
+Dimensões			&12cm x 17cm x 3cm										\\
+Peso				&~200g													\\
+Portas USB 			&3														\\
+Saída de áudio 		&2 P2 (input e output)									\\
+Porta de rede 		&RJ-45 ,Wireless(3dbi)									\\
+Valor		 		&R\$ 510,00												\\ \hline 			
+	
+\end{tabular}
+}{
+	\fonte{\cite{thinclientbrasil}}%
+	%\nota{}%
+	%\nota[]{}%
+}
+\end{table}
+
+
+\begin{table}[h!]
+\IBGEtab{%
+
+\caption{Especificação do modelo TCBR100}%
+\label{tab:final_thin_client_brasil}
+
+}{%
+\begin{tabular}{ll}\hline
+\multicolumn{2}{l}{\textbf{Especificação}}          						\\ \hline
+Processador			&--														\\
+RAM					&--														\\
+Chip Gráfico		&--														\\
+Saida de vídeo		&VGA													\\
+Dimensões			&9,8cm x 9,8cm x 2,1cm									\\
+Peso				&~200g													\\
+Portas USB 			&4 + 1(mini USB)										\\
+Saída de áudio 		&2 P2 (input e output)									\\
+Porta de rede 		&RJ-45 													\\
+Valor		 		&R\$ 510,00												\\ \hline 			
+	
+\end{tabular}
+}{
+	\fonte{\cite{thinclientbrasil}}%
+	%\nota{}%
+	%\nota[]{}%
+}
+\end{table}
+
+
+ 
+Na busca por mais modelos, foram encontradas algumas lojas que revendem esse tipo de aparelho individualmente no Brasil, existem outras que vendem produtos numa forma de pacote, algo que não é foco do trabalho. Os produtos encontrados estão descritas nas Tabelas \ref{tab:thi_cleint_outros1}, \ref{tab:thi_cleint_outros2} e \ref{tab:thi_cleint_outros3}:
+
+
+\begin{table}[h!]
+\IBGEtab{%
+	\caption{Especificação do modelo Wyse D10DP}%
+	\label{tab:thi_cleint_outros1}
+}{%
+\begin{tabular}{ll}\hline
+\multicolumn{2}{l}{\textbf{Especificação}}          						\\ \hline
+Processador			&AMD G-Series T48E de 1,4 GHz e 2 núcleos				\\
+RAM					&DDR3 2 GB												\\
+Chip Gráfico		&Radeon HD 6250											\\
+Saida de vídeo		&DisplayPort, DVI-I 									\\
+Resolução de vídeo	&2560 x 1600, 1920 x 1200								\\
+Dimensões			&6,7cm x 1,6cm x 7,3cm									\\
+Peso				&0,93kg													\\
+Protocolo			& --													\\
+Portas USB 			&2														\\
+Saída de áudio 		&mini de 1/8 polegadas, Alto-falante mono interno		\\
+Porta de rede 		&RJ-45, wireless										\\
+Power				&--														\\
+Valor		 		&R\$ 2.030,00										\\ \hline 					
+\end{tabular}
+}{
+	\fonte{\cite{DELL}}%
+	%\nota{}%
+	%\nota[]{}%
+}
+\end{table}
+
+\newpage
+
+
+
+%http://todaoferta.uol.com.br/comprar/dell-wyse-thin-client-5290d90d7-amd-dual-core-t48e-14ghz-FJUJ8LM9GX
+
+
+
+\begin{table}[h!]
+\IBGEtab{%
+	\caption{Especificação do modelo ENTC-1000}%
+	\label{tab:thi_cleint_outros2}
+
+}{%
+\begin{tabular}{ll}\hline
+\multicolumn{2}{l}{\textbf{Especificação}}          						\\ \hline
+Processador			&Cirrus Logic EP9307 ARM, dual-core de 200 MHz				\\
+RAM					&64 MB													\\
+Chip Gráfico		& não possui											\\
+Saida de vídeo		&VGA													\\
+Resolução de vídeo	&2560 x 1600, 1920 x 1200								\\
+Dimensões			&9,5cm x 15cm x 3cm										\\
+Peso				&0,93kg													\\
+Protocolo			& RDP 2.4.1												\\
+Portas USB 			&2														\\
+Saída de áudio 		&1 mini-jack 3,5 mm										\\
+Porta de rede 		&RJ-45													\\
+Power				& 5 VDC													\\ 
+Valor				&R\$ 326,00 											\\ \hline 					
+\end{tabular}
+}{
+	\fonte{\cite{atera}}%
+	%\nota{}%
+	%\nota[]{}%
+}
+\end{table}
+
+%\item[thin client Nc600]\ 
+
+\begin{table}[h!]
+\IBGEtab{%
+	\caption{Especificação do modelo Nc600}%
+	\label{tab:thi_cleint_outros3}
+
+}{%
+\begin{tabular}{ll}\hline
+\multicolumn{2}{l}{\textbf{Especificação}}          						\\ \hline
+Processador			&800 mhz												\\
+RAM					&128m													\\
+Chip Gráfico		& não possui											\\
+Saida de vídeo		&VGA													\\
+Resolução de vídeo	&2560 x 1600, 1920 x 1200								\\
+Dimensões			&11.5cm x 11.5cm x 2.5cm								\\
+Portas USB 			&3														\\
+Saída de áudio 		&1 P2													\\
+Porta de rede 		&RJ-45													\\
+Power				& 5.0V 2.4A												\\
+Valor		 		&R\$ 420,00												\\ \hline 					
+\end{tabular}
+}{
+	\fonte{\cite{lojawt}}%
+	%\nota{}%
+	%\nota[]{}%
+}
+\end{table}
+
+\newpage
+
+
+
+
+
+
+%pesquisar em \href{http://www.supera.ind.br/#!thin-client/c1ia1}{entrar aki}
+
+\section{Aplicações}
+
+A maioria dos recursos computacionais em sistemas \textit{desktop}, não é plenamente aproveitada. A tecnologia \textit{thin client} é uma solução que otimiza o funcionamento do PC (servidor), para diminuir o tempo que o computador permanece ocioso. Com a implantação de \textit{thin client} é possível gerar vários clientes para o acesso a esses recursos. Os requisitos de \textit{Hardware} do servidor depende do número de terminais e da necessidade do usuário, o que deve ser bem pensado antes de elaborar e formatar o ambiente utilizado. Existem estabelecimentos onde a tecnologia \textit{thin client}, possuindo aprovado e homologados da \citeonline{thinclientbrasil}:
+
+\begin{alineas}
+\item Escritório de contabilidade;
+\item Escritório de arquitetura;
+\item Empresa de \textit{marketing}/design;
+\item Escritório de advocacia;
+\item Empresa de engenharia;
+\item Laboratório de Informática;
+\item Empresa de comunicação;
+\item Escolas e Universidades;
+\item Prefeituras;
+\item \textit{Stand} de vendas;
+\item Balcão de atendimento;
+\item Concessionárias;
+\item Farmácias;
+\item Bibliotecas;
+\item Fábricas em geral;
+\item Pizzarias;
+\item Lojas de material de construção;
+\item Supermercados;
+\item Ilhas de computadores em geral;
+\end{alineas}
+
+
+Além de ser bastante econômico, o \textit{thin client} é ecologicamente correto. O consumo de energia é bem menor, comparado à soluções convencionais e também gera menos lixo eletrônico no meio ambiente, como sendo apenas alguns dos benefícios que podem ser aproveitados, através da implantação desta estrutura. Logo abaixo há uma lista de beneficios da utilização do \textit{thin client} de acordo com a \citeonline{thinclientbrasil}.
+
+\begin{alineas}
+\item Baixo investimento inicial;
+\item Baixo custo de administração de TI;
+\item Facilidade de proteção e gerenciamento de rede;
+\item Baixo custo de \textit{hardware};
+\item Menor custo para licenciamento de \textit{softwares};
+\item Baixo consumo de energia;
+\item Não desperta interesse dos ladrões, diminuindo risco de furto;
+\item Resistência a ambientes hostis;
+\item Menor dissipação de calor para o ambiente (economia com ar condicionado);
+\item Não possui ruídos (ao contrário dos PCs);
+\item Manutenção muito baixa;
+\item Possui maior vida útil, gerando menos lixo eletrônico.
+\end{alineas}
+
+As principais vantagens em utilizar a topologia de \textit{thin client} estão relacionadas à economia de energia, \textit{software} e \textit{hardware}. Na parte referente à economia de energia, é calculado o consumo direto e indireto, pois um \textit{thin client} consome cerca de 5\% da energia de um computador convencional e além do consumo próprio deve se levar em conta a economia de energia elétrica relacionada a utilização de ar-condicionado, já que os aparelhos de \textit{thin client} dissipam menos calor para o ambiente.\cite{EmailThinClient}
+	 
+
+\begin{table}[h!]
+\IBGEtab{%
+	\caption{Tabela informando o calculo para o consumo de energia elétrica anual}%
+
+}{%
+\begin{tabular}{p{3,5cm}p{7cm}p{2cm}}\hline
+%Solução 				&Descrição																	& Custo			\\ \hline
+Solução Convencional	& Gasto anual em Energia para 30 computadores								&R\$ 11.484,00	\\
+Solução ThinClient		& Gasto anual em Energia para 01 Servidor + 30 Terminais thin clients		&R\$  1.041,22 	\\
+\hline										
+Economia				&																			&R\$ 10.442,78	\\ 	\hline				
+\end{tabular}
+}{
+	\fonte{\cite{EmailThinClient} }%
+	%\nota{}%
+	%\nota[]{}%
+}
+\end{table}
+
+
+A economia referente a \textit{software}, diz respeito a parte que licença de aplicativos e sistema, devido a centralização dos aplicações, sendo suficiente a compra de um licença do produto, mas isso depende do sistema opeacional que no caso da plataforma Microsoft é necessário comprar licença de Terminal Server, além de possuir licenças de CAL (\textit{Client Access License}) para todos os nós clientes.\cite{microsoft}. Já para o \textit{hardware}, quando o administrador da rede pensa em atualizar o \textit{hardware}, é necessário apenas a mudança em seu servidor. Com isso, todas as estações serão beneficiadas com este \textit{upgrade}.\cite{EmailThinClient}.
+
+
+\begin{table}[h!]
+\IBGEtab{%
+	\caption{Tabela informando o calculo para manutenção anual\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (hardware/software)}%
+
+}{%
+\begin{tabular}{p{3,5cm}p{7cm}p{2cm}}\hline
+%Solução 				&Descrição																	& Custo			\\ \hline
+Solução Convencional	& Gasto anual em Energia para 30 computadores								&R\$  10.800,00 	\\
+Solução ThinClient		& Gasto anual em Energia para 01 Servidor + 30 Terminais thin clients		&R\$   3.600,00  	\\
+\hline										
+Economia				&																			&R\$  7.200,00 	\\ 	\hline				
+\end{tabular}
+}{
+	\fonte{\cite{EmailThinClient} }%
+	%\nota{}%
+	%\nota[]{}%
+}
+\end{table}
+
+\newpage
+
+
+
+\chapter{Raspberry PI}
+
+
+\section{O que é?}
+
+
+É um pequeno dispositivo que permite, o acesso da mesma maneira de um computador. O Raspberry Pi tem a capacidade de interagir com o mundo exterior, permitindo uma gama de projetos com sua utilização, como explica o próprio site da \citeonline{raspberrypi.org}. O Raspberry Pi é mini microcomputador de baixo custo, que se conecta em monitores ou TVs, e usa um teclado e mouse padrão. 
+
+O Raspberry PI baseado na arquitetura ARM, e se alimentar com energia de 1A e 5V, fornecida pela sua porta micro-USB. o que torna dispensável o dissipadores de calor no dispositivo que possui uma unidade central, processador gráfico e também um hardware de áudio e de comunicações, montada em um único componente, um chip de circuito impresso com baixo consumo de energia \cite{eben2013raspberry}.
+
+\citeonline{eben2013raspberry}, diz que a arquitetura ARM é algo incomum no mundo dos desktops, o que faz Raspberry Pi não seja compatível com o software tradicional de PCs, por não possuir o mesmo conjunto de instruções, mas apesar disso existe uma porção de softwares disponíveis que utilizam instruções ARMv6 e está em crescimento com a popularidade do Raspberry PI. 
+
+\section{Surgimento}
+
+A ideia da criação do projeto do Raspberry Pi é feita para ser usado por crianças de todo o mundo para aprender a programar e entender como funcionam os computadores. Em 2006, Eben Upton e sua equipe contendo professores, acadêmicos e entusiastas da computação em torno dele  desenvolveram o primeiros conceitos para o Raspberry Pi, sendo baseados no Atmel ATmega. Em 2009, os membros oficialmente criaram a Raspberry Pi Foundation. Em agosto de 2011, foi produzido a primeira série ou a série alpha com  aproximadamente 50 placas, elas serviram principalmente como uma plataforma para desenvolvedores, para depuração e para fins de demonstração das capacidades do produto. Em dezembro de 2011, foi a vez da série beta aonde foi produzido 25 placas, já baseada no layout de produção \cite{Werner.Raspberry,raspberrypi.org}.
+
+Após os criadores eliminarem as últimas falhas, ocorreu um leilão online em janeiro de 2012, 10 placas desta série beta foram vendidas por um total de 16.336 libras. Em 29 de fevereiro de 2012, os servidores web da fundação e duas distribuidoras oficiais foram sobrecarregadas em poucos minutos pela tempestade de pedidos. Muitos clientes esperaram durante horas para submeter uma pré-encomenda \cite{Werner.Raspberry}.
+
+
+O projeto surgiu originalmente como uma ferramenta para o aprendizado de linguagens de programação, especialmente em países de terceiro mundo, queriam oferecer um computador barato o suficiente para que cada estudante recebesse o seu junto com outros materiais e pudesse praticar em casa. O que explica o motivo pelo qual o modelo inicial do Raspberry Pi (batizado de "modelo A") não possui interface de rede, pois o aparelho conteria os materiais, sem a necessidade um acesso à rede e à Internet. Mas, o projeto acabou crescendo muito, atraindo a atenção de inúmeros pessoas, interessados em usá-lo em projetos diversos, bem como órgãos de educação e outras entidades mundo afora \cite{ClubeHardware}.
+
+
+\section{Tipos/Produtos}
+
+
+O Raspberry Pi possui muitos títulos impressionantes. Um desses títulos é por ser o menores computadores pessoais do mundo, com o tamanho de um cartão de crédito e também um dos mais barato. Mesmo assim ele possui uma capacidade impressionante  para  reproduzir vídeos em HD, editores de texto e jogos. E no final de 2012, os usuários ganharam uma loja de aplicativos própria para Raspberry PI aonde é possivel baixar apps e colocar programas desenvolvidos no loja \cite{revistagalileu}. Abaixo possui a lista de item contidos no Raspberry PI.
+
+
+
+\begin{description}
+
+\item[Processador]
+Em alguns modelos Raspberry Pi possui um processador que é sistema em um chip de 700 MHz de 32 bits, e na versão atual possui um  quad-core ARM Cortex-A7 com 900MHz. Eles construído sobre a arquitetura ARM11. Chips ARM apresentam-se em uma variedade de arquiteturas com diferentes núcleos configurados. O modelo B tem 512MB de memória RAM, já possuindo na versão 2 desse modelo com 1GB de RAM, enquanto o primeiro lote do modelo B e o modelo A possuía 256 MB.
+ 
+\item[Slot para cartão de memória]
+O armazenado em um cartão de memória SD, pois não possui um disco rigido. a entrada do soquete SD ou MicroSD, soldada a placa.
+
+\item[Porta USB]
+Todos os modelos possuem entrada USB mas a quantidade varia de modelo a modelo como no caso modelo A que possui uma apenas, já no modelo B há duas portas USB 2.0 e no modelo B+ em diante possui quatro portas USB 2.0. Algumas das primeiras placas do Raspberry Pi foram limitadas quanto à quantidade de corrente que elas poderiam fornecer. Alguns dispositivos USB podem chegar a 500mA. A placa original do Pi suportava 100mA ou quase, mas as revisões mais recentes alcançam até a especificação completa das portas USB 2.0.
+
+\item[Porta Ethernet] 
+O modelo B em diante possui porta Ethernet padrão RJ45. O modelo A já não tem, mas pode ser conectado a uma rede com fios por meio de um adaptador de rede Ethernet USB, coisa que no modelo B esse adaptador de Ethernet é embutido. A conectividade Wi-Fi por meio de um adaptador USB externo apenas.
+
+\item[Conector HDMI] 
+A porta HDMI está presente em todos os modelos, e oferece saída de áudio e vídeo digital.
+
+\item[Saída de áudio analógico]
+Conector de áudio analógico padrão de 3,5 mm que é destinado a conduzir cargas de alta impedância, que a qualidade é muito inferior à saída de áudio HDMI quando conectado a um aparelho por meio da interface HDMI.
+
+\item[Saída de vídeo composto(Composite)]
+Um conector tipo RCA fornece sinais de vídeo NTSC ou PAL existe em apenas alguns modelos. O sinal de vídeo segundário atualmente é um conector de 4 polos TRRS, sendo assim necessário um cabo apropriado. Esses conectores produzem um formatos de vídeo de resolução baixa, uma segunda opção caso não possua tela com entrada HDMI.
+
+\item[Entrada de energia] 
+Conector micro USB é usado para fornecer energia que não é uma porta USB adicional,mas sim para sua alimentação. A porta micro USB foi escolhida porque o conector é barato e fontes de alimentação USB são fáceis de encontrar.
+
+\item[GPIO hearder]
+Possui o propósito de entrada e saída de corrente (GPIO) pinos. Eles são um conjunto de conexões que têm vários funções, mas sua principal delas é conectar o Raspberry Pi a um e circuito eletrônico, usando normalmente programas para controlar o circuito.
+
+\end{description}
+
+Atualmente existe 5 modelos de Raspberry PI, de acordo com \citeonline{raspberrypi.org}, a cada modelo lançado, o produto e aprimorado, sendo a ultima versão lançada, pode executar toda a gama de distribuições ARM GNU/Linux, incluindo Ubuntu Snappy Core, e também o  Microsoft Windows 10. Logo a baixo estão todos os modelos pruduzidos comercialmente como especificado no site oficial da \citeonline{raspberrypi.org} e no sites venda \citeonline{Filipelop}.
+
+
+Atualmente existe 5 modelos de Raspberry PI, de acordo com \citeonline{raspberrypi.org}, a cada modelo lançado, o produto e aprimorado, sendo que a ultima versão lançada pode executar varias distribuições ARM GNU/Linux, incluindo Ubuntu Snappy Core, e também o  Microsoft Windows 10. Logo a baixo estão os modelos pruduzidos comercialmente como especificado no site oficial da \citeonline{raspberrypi.org} e no sites venda \citeonline{Filipelop,Raspberrypiportugal,multilogicashop}.
+
+\newpage
+\begin{description}
+
+\item[Raspberry PI 1 Modelo A]\ 
+
+\begin{table}[h!]
+\IBGEtab{%
+	\caption{Especificação do Raspberry PI Geração 1 Modelo A}%
+
+}{%
+	\begin{tabular}{ll}\hline
+	\multicolumn{2}{l}{\textbf{Especificações}}          						\\ \hline
+	Processador			&700 MHz ARM1176JZF-S core								\\
+	RAM					&256 MB													\\
+	Chip Gráfico		&Broadcom VideoCore IV @ 250 MHz						\\
+	Saida de vídeo		&RCA Composto e HDMI									\\
+	Cartão de memoria	&SD cards												\\
+	Portas USB 			&1														\\
+	Saída de áudio 		&Conector RCA, HDMI										\\
+	Porta de rede 		& não possui											\\
+	Power				& 5V via MicroUSB ou header GPIO						\\
+	Valor 		&Não encontrado no mercado										\\ \hline			
+	\end{tabular}
+}{
+	\fonte{\citeonline{Raspberrypiportugal}}%
+	%\nota{}%
+	%\nota[]{}%
+}
+\end{table}
+
+
+\item[Raspberry PI 1 Modelo A+]\ 
+\begin{table}[h!]
+\IBGEtab{%
+	\caption{Especificação do Raspberry PI Geração 1 Modelo A+}%
+
+}{%
+\begin{tabular}{ll}\hline
+\multicolumn{2}{l}{\textbf{Especificações}}          						\\ \hline
+Processador			&700 MHz ARM1176JZF-S core								\\
+RAM					&256 MB													\\
+Chip Gráfico		&Broadcom VideoCore IV @ 250 MHz						\\
+Saida de vídeo		&Composite, HDMI e Raw LCD								\\
+Cartão de memoria	&SD cards												\\
+Portas USB 			&1														\\
+Saída de áudio 		&Conector de 3.5 mm (Composite), HDMI								\\
+Porta de rede 		& não possui											\\
+Power				& 5V via MicroUSB ou header GPIO						\\
+Valor		 		& R\$ 189,90											\\ \hline 					
+\end{tabular}
+}{
+	\fonte{\citeonline{Filipelop}}%
+	%\nota{}%
+	%\nota[]{}%
+}
+\end{table}
+
+\newpage
+
+\item[Raspberry PI 1 Modelo B]\ 
+\begin{table}[h!]
+\IBGEtab{%
+	\caption{Especificação do Raspberry PI Geração 1 Modelo B}%
+
+}{%
+\begin{tabular}{ll}\hline
+\multicolumn{2}{l}{\textbf{Especificações}}          						\\ \hline
+Processador			&700 MHz ARM1176JZF-S core								\\
+RAM					&256 MB ou  512 MB (compartilhada com GPU) 			\\
+Chip Gráfico		&Broadcom VideoCore IV @ 250 MHz						\\
+Saida de vídeo		&RCA Composto e HDMI									\\
+Cartão de memoria	&SD cards												\\
+Portas USB 			&2														\\
+Saída de áudio 		&Conector RCA, HDMI								\\
+Porta de rede 		& RJ-45													\\
+Power				& 5V via MicroUSB ou header GPIO						\\
+Valor		 		& Não encontrado no mercado								\\ \hline 					
+\end{tabular}
+}{
+	\fonte{\citeonline{multilogicashop}}%
+	%\nota{}%
+	%\nota[]{}%
+}
+\end{table}
+
+
+
+\item[Raspberry PI 1 Modelo B+]\ 
+
+\begin{table}[h!]
+\IBGEtab{%
+	\caption{Especificação do Raspberry PI Geração 1 Modelo B+}%
+
+}{%
+\begin{tabular}{ll}\hline
+\multicolumn{2}{l}{\textbf{Especificações}}          						\\ \hline
+Processador			&700 MHz ARM1176JZF-S core								\\
+RAM					&256 MB ou  512 MB (compartilhada com GPU) 			\\
+Chip Gráfico		&Broadcom VideoCore IV @ 250 MHz						\\
+Saida de vídeo		&Composite, HDMI e Raw LCD 								\\
+Cartão de memoria	&MicroSD card											\\
+Portas USB 			&4														\\
+Saída de áudio 		&Conector de 3.5 mm (Composite), HDMI								\\
+Porta de rede 		& RJ-45													\\
+Power				& 5V via MicroUSB ou header GPIO						\\
+Valor		 		& R\$ 229,90											\\ \hline 					
+\end{tabular}
+}{
+	\fonte{\citeonline{Filipelop}}%
+	%\nota{}%
+	%\nota[]{}%
+}
+\end{table}
+
+\newpage
+
+\item[Raspberry PI 2 Modelo B]\ 
+\begin{table}[h!]
+\IBGEtab{%
+	\caption{Especificação do Raspberry PI Geração 2 Modelo B}%
+
+}{%
+\begin{tabular}{ll}\hline
+\multicolumn{2}{l}{\textbf{Especificações}}          						\\ \hline
+Processador			&900 MHz Quad-core ARM Cortex-7						\\
+RAM					&1GB													\\
+Chip Gráfico		& VideoCore IV 3D graphics core						\\
+Saida de vídeo		&Composite, HDMI e Raw LCD 								\\
+Cartão de memoria	&MicroSD card											\\
+Portas USB 			&4														\\
+Saída de áudio 		&Conector de 3.5 mm (Composite), HDMI								\\
+Porta de rede 		& RJ-45													\\
+Power				& 5V via MicroUSB ou header GPIO						\\
+Valor		 		& R\$ 279,90											\\ \hline 				
+\end{tabular}
+}{
+	\fonte{\citeonline{Filipelop}}%
+	%\nota{}%
+	%\nota[]{}%
+}
+\end{table}
+
+\end{description}
+
+
+\section{Aplicações}
+
+As utilidades do Raspberry Pi têm se multiplicado, possibilitando controlar e criar coisas para facilitar de alguma maneira o dia a dia, abaixo está uma lista com algumas aplicações que o raspberry PI é utilizado. 
+
+\begin{description}
+
+\item[Otto] A câmera Otto funciona como uma máquina fotográfica que cria gifs ao invés de fotos. A câmera sincroniza com o smartphone de modo que você pode facilmente compartilhar os GIFs \cite{otto}.
+  
+\item[Professor de braile] O projeto MUDRA visa ensinar crianças com deficiência visual a ler em braile, usando um Raspberry Pi programado em Python, o sistema indica através de um 'teclado' qual a forma da letra reproduzida sonoramente \cite{mudra}.
+
+\item[Automação de casas] A possibilidade de ligar e desligar as luzes remotamente ou qualquer outro objeto ligado a casa, por meio do Raspberry PI, que dá o acesso para outros dispositivos controlarem também \cite{AplicacaoRaspberry}.
+
+\item[Servidor web pessoal] O microcomputador Raspberry pode ser ligado a internet com algumas configurações na sua rede e servir como servidor web, que serve muito bem para hospedagem sem ter que pagar taxas mensais, alem de ter um consumo de energia bem menor.
+
+\item[Câmera Pi - Camera  DSLR com computador embutido] Incorpora um Raspberry Pi em uma câmera DSLR, permite que um fotógrafo transmitidas para um PC ou tablet a cada captura, sendo que o controle remoto da câmera pode ser através de um smartphone de qualquer lugar do mundo e permite também programar a câmera para tirar fotos em intervalos precisos \cite{cameraPI}.
+
+\item[Mesa de fliperama] Este projeto envolve um pouco de trabalho em madeira, mas o resultado é um mesa de arcada controlada pelo  Raspberry Pi que lhe permite jogar seus antigos jogos favoritos de mesa, utilizando uma tela \cite{AplicacaoRaspberry}.
+
+\item[BerryTerminal] É uma distribuição Linux minimalista que deixa o Raspberry Pi apto a acessar uma rede thin client. Ele permite aos usuários acessem um servidor LTSP \cite{berryterminal}.
+
+\end{description}
+
+
+% -----------------------------------------------------------------------------------------------------------
+% Fim revisão de literatura
+% -----------------------------------------------------------------------------------------------------------
+
+
+
+% -----------------------------------------------------------------------------------------------------------
+% Inserir Metodologia
+% -----------------------------------------------------------------------------------------------------------
+
+\part{Metodologia}
+
+A população utilizada para o projeto será inanimado, contendo um computador que será o servidor e um mini microcomputador Raspberry PI como sendo o cliente, que acessará o servidor por meio de uma rede local, aonde estaram interligados por cabos de Ethernet RJ-45. 
+
+
+O sistema operacional no servidor, será uma distribuição do Ubuntu 12.04 Desktop, ligado a duas redes locais, uma das redes locais possuirá conexão com a internet e o outro possui apenas aparelhos conectados aos servidor. E para fornecer esse acesso de thin client, usaremos como cliente, um microcomputador Raspberry PI modelo B versão 1, conectado a um fonte de energia, monitor, teclado e mouse. aonde será feito os testes de desempenho, velocidade e usabilidade. Para criação de parâmetros desses teste usaremos um outro computador que desempenhará também o papel de cliente, essa maquinas possui um processador pentiun dual-core 1,73 GHZ com um 1GB de memória RAM conectados a uma fonte de energia,  monitor, teclado e mouse.
+
+Na instalação do servidor thin client usaremos o LTSP, por que o sistema operacional usado para fazer a inicialização do Raspberry PI pela rede funciona utilizando o software de thin client LTSP. %(colocar pesquisa encontrada da quantidade de thin client no mundo)  %Por que
+%sejá criado a uma imagem do sistema, usada pelas maquinas clientes como o sistema operacional.
+
+\url{http://www.ltsp.org/stories/stats/}
+
+ \url{https://geekytheory.com/tutorial-raspberry-pi-uso-de-convertidores-hdmi-vga/}
+
+
+ \url{https://github.com/fenlogic/vga666/blob/master/documents/vga_manual.pdf}
+
+
+\url{http://www.mundoopen.com.br/servidor-de-thinclient-reducao-de-custos-com-desktops.html}
+
+
+
+%squashfs-tools -[https://packages.debian.org/pt/sid/squashfs-tools] Squashfs é um sistema de ficheiros altamente comprimido e de apenas leitura para Linux. Usa compressão zlib para comprimir ficheiros, inodes e directórios. Os inodes no sistema são muito pequenos e todos os blocos são empacotados para minimizar o custo dos dados. São suportados tamanhos de blocos maiores que 4K até um máximo de 64K.
+
+%openssh-server -[http://www.vivaolinux.com.br/dica/Instalando-e-configurando-servidor-SSH-(Ubuntu)][http://ubuntu.blog.br/como-instalar-e-configurar-o-openssh-server-linux/]
+
+
+\part{Instalação e Configuração}
+
+\chapter{Servidor}
+
+Para criar o servidor LTSP, é instalado o pacote chamado de \textit{ltsp-server-standalone} que inclui um conjunto de pacotes contendo o DHCP com o nome de \textit{isc-dhcp-server}, o TFTP chamado de \textit{tftpd-hpa}, x sendo \textit{TODO} e XDMCP dentro dos pacotes \textit{TODO}.
+
+
+O comando usado para a instalação do pacote principal LTSP com todos as suas dependencias
+
+\begin{verbatim}
+		sudo apt-get install ltsp-server-standalone
+\end{verbatim}
+
+
+Após a instalação do pacote principal, iniciará todos os servicos necessarios para utilizar o PC como um servidor thin client com LTSP, mas ainda necessita informar qual a interface de rede utilizará na comunicação dos clientes.
+
+\begin{verbatim}
+	/etc/default/isc-dhcp-server
+\end{verbatim}  
+
+O local do arquivo que determinado logo acima, especifica qual interface de rede será usada para a comunicação com os clientes. Dentro do arquivo deve possuir uma linha de comando contendo uma variavel com o nome de \textbf{INTERFACES}, caso não exista ou já possua algum parametro, modifique para ficar semelhante a linha abaixo, alterando o X  que representa o numero da sua interface de rede que irá se conectar aos clientes do thin client.
+
+\begin{verbatim}
+	INTERFACES = "ethX"
+\end{verbatim}
+
+Seleciando a interface de rede, deve-se configurar o servidor DHCP para a distribuição dos endereços IP para seus clientes, esse arquivo é exclusivamente para o thin client, usando um arquivo não padrão para a configuração do serviço. 
+
+\begin{verbatim}
+	/etc/ltsp/dhcpd.conf
+\end{verbatim}  
+
+Dentro desse arquivo talvez já exista esse trecho de código abaixo, caso não tenha insira. Essas configurações podem ser alteradas de acordo com a necessidade e o conhecimento sobre o assunto, pois determinam a faixa de IP que será distribuída para as maquinas cliente, e possui outras parâmetros como o endereço do servidor, o caminho de acesso dentro servidor para local aonde reside os arquivos para inicializado da maquina cliente, e também outras configurações padrões de uma rede local. 
+
+\begin{verbatim}
+	authoritative;
+
+	subnet 192.168.0.0 netmask 255.255.255.0 {
+	    range 192.168.0.20 192.168.0.250;
+	    option domain-name "example.com";
+	    option domain-name-servers 192.168.0.1;
+	    option broadcast-address 192.168.0.255;
+	    option routers 192.168.0.1;
+	#    next-server 192.168.0.1;
+	#    get-lease-hostnames true;
+	    option subnet-mask 255.255.255.0;
+	    option root-path "/opt/ltsp/i386";
+	    if substring( option vendor-class-identifier, 0, 9 ) = "PXEClient" {
+		filename "/ltsp/i386/pxelinux.0";
+	    } else {
+		filename "/ltsp/i386/nbi.img";
+	    }
+	}
+\end{verbatim}
+
+%TODO http://chschneider.eu/linux/server/ltsp-server.shtml
+
+Para configurar um servidor DHCP, a sua placas de rede ligada à rede local teve ter um endereço IP fixo para que isso aconteça deverá ser informado ao servidor qual o seu IP, e assim como nas configurações acima, os comando para configurar a rede são salvos em arquivos de configuração, que são lidos pelos seus respctivos serviços.
+
+\begin{verbatim}
+/etc/network/interfaces
+\end{verbatim} 
+
+Nesse arquivo será inserido o codigo abaixo caso não exista, A linha "auto ..."\ lista as interfaces que devem ser ativadas automaticamente e as demais linhas abaixo possui a configuração da sua respectiva interfaces. Para novas configurações, adiciona-se  no final do arquivo após na linha "auto", como a interface desejada \cite{ClubeHardware,LTSP5}.
+
+
+\begin{verbatim}
+	auto lo
+	iface lo inet loopback
+
+	auto ethX  # X como sendo o numero da sua interface de rede
+	iface ethX inet static
+		address 192.168.0.1
+		netmask 255.255.255.0
+		network 192.168.0.0
+		broadcast 192.168.0.255
+\end{verbatim}
+
+Com a alteração desses arquivos de configuração já é possível iniciar a criação da imagem iso usada pelo cliente, para inicio da criação da imagem utiliza-se um comando que pode variar de acordo com arquitetura do servidor, caso seja uma arquitetura de 32-bits
+
+\begin{verbatim}
+ltsp-build-client
+\end{verbatim}
+
+No caso de uma arquitetura 64-bits, deve-se utilizar o comando abaixo.
+
+\begin{verbatim}
+ltsp-build-client --arch="i386" 
+\end{verbatim}
+
+%TODO
+
+\chapter{Raspberry}
+
+
+
+
+
+% -----------------------------------------------------------------------------------------------------------
+% Fim Metodologia
+% -----------------------------------------------------------------------------------------------------------
+
+
+
+% -----------------------------------------------------------------------------------------------------------
+% Inserir Análise e interpretação dos dados
+% -----------------------------------------------------------------------------------------------------------
+
+\part{Análise e interpretação}
+
+% -----------------------------------------------------------------------------------------------------------
+% Fim Análise e interpretação dos dados
+% -----------------------------------------------------------------------------------------------------------
+
+
+
+% -----------------------------------------------------------------------------------------------------------
+% Finaliza o bookmark do PDF para que se inicie o bookmark na raiz e adiciona espaço de parte no Sumário
+% -----------------------------------------------------------------------------------------------------------
+
+\phantompart
+
+% -----------------------------------------------------------------------------------------------------------
+% Fim bookmark do PDF 
+% -----------------------------------------------------------------------------------------------------------
+
+
+
+% -----------------------------------------------------------------------------------------------------------
+% Inseri Conclusão
+% -----------------------------------------------------------------------------------------------------------
+
+\part{Conclusão}
+
+% ---
+% Conclusão
+% ---
+
+
+% -----------------------------------------------------------------------------------------------------------
+% Fim Conclusão
+% -----------------------------------------------------------------------------------------------------------
+
+
+
+% -----------------------------------------------------------------------------------------------------------
+% ELEMENTOS PÓS-TEXTUAIS
+% -----------------------------------------------------------------------------------------------------------
+
+\postextual
+
+% -----------------------------------------------------------------------------------------------------------
+% Fim ELEMENTOS PÓS-TEXTUAIS
+% -----------------------------------------------------------------------------------------------------------
+
+
+
+% -----------------------------------------------------------------------------------------------------------
+% Inseri Referências bibliográficas
+% -----------------------------------------------------------------------------------------------------------
+
+\bibliography{REFERENCIAS}
+
+% -----------------------------------------------------------------------------------------------------------
+% Fim Referências bibliográficas
+% -----------------------------------------------------------------------------------------------------------
+
+% ---
+% Inicia os apêndices
+% ---
+\begin{apendicesenv}
+
+% Imprime uma página indicando o início dos apêndices
+\partapendices
+
+
+
+
+\end{apendicesenv}
+% ---
+
+
+% ----------------------------------------------------------
+% Anexos
+% ----------------------------------------------------------
+
+% ---
+% Inicia os anexos
+% ---
+\begin{anexosenv}
+
+% Imprime uma página indicando o início dos anexos
+\partanexos
+
+% ---
+
+\end{anexosenv}
+
+%---------------------------------------------------------------------
+% INDICE REMISSIVO
+%---------------------------------------------------------------------
+\phantompart
+\printindex
+%---------------------------------------------------------------------
+
+\end{document}
