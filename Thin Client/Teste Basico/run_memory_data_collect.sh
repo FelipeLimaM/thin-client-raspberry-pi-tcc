@@ -2,6 +2,12 @@
 
 file='memory'
 
-while (free -kt | grep Mem | awk '{print expr ($3 - ($6 + $7))/1024}')>>file; do 
-    sleep .5
+if [ -a $file ]; then
+	rm $file
+fi 
+
+(echo $BASHPID)>exec.wa
+
+while (free -kt | grep Mem | awk '{print expr ($3 - ($6 + $7))}')>>$file; do 
+    sleep 1
 done
