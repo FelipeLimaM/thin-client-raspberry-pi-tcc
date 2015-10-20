@@ -1,27 +1,25 @@
 #!/bin/bash
 
-n=4
+arr=("firefox" "libreoffice --writer" "rhythmbox" "libreoffice --calc" "/usr/games/gnome-sudoku" "libreoffice --draw" "libreoffice --calc" "/usr/games/sol"); 
 
-arr=("firefox" "libreoffice --writer" "rhythmbox" "shotwelld"); 
+temp=(3 5 2 6 1 0 4 3 2 8 4 1 4 5 1 6 3 1 6 7 3 1 5 2 5);
 
+n=`expr ${#arr[@]} - 1`
 
-start_time=`date -d "10/06/2015 22:54" +%s`
-end_time=`date -d "10/06/2015 22:54" +%s`
+start_time=`date -d "10/19/2015 23:50" +%s`
+end_time=`date -d "10/19/2015 23:51" +%s`
 
 
 sleep $(expr $start_time - `date +%s`) #start time to script
 
 while [ true ]; do
-	run=${arr[$(shuf -i 0-$n -n 1)]}
-	sleep $(shuf -i 1-10 -n 1) 
-	$run 
-	sleep $(shuf -i 5-15 -n 1)
-	if [ -z ${arr[$(shuf -i 0-`expr $n + 1` -n 1)]} ]; then 
-		kill $(pidof ${arr[$(shuf -i 0-$n -n 1)]})
-	fi
-	if [ date +%s -ge $end_time ]; then
+	
+	for i in `seq 0 $n`; do
+		${arr[$i]} &
+		sleep ${temp[$i]}
+	done
+
+	if [ $(date +%s) -ge $end_time ]; then
 		break;
 	fi
 done
-
-
