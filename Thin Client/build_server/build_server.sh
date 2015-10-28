@@ -40,7 +40,9 @@ else
     fi
 	clear
 	# ALTER  /etc/default/isc-dhcp-server
-	connect=$(ifconfig |  grep -E encap | awk -F 'Link' '{print $1 }'   | awk -F '$' '{print $1 }')
+	connect=$(ifconfig |  grep -E encap | awk -F 'Link' '{print $1 }' | awk -F '$' '{print $1 }')
+	echo "choose the interface to the LTSP environment?"
+	echo ""	
 	select result in $connect
 	do
 		if [ -n "$result" ]; then	
@@ -62,9 +64,10 @@ else
 	(cat $NEW_CONF_BAK) > $NEW_CONF
 
 	rm $NEW_CONF_BAK
-
+	
+	clear
+	echo "click ENTER to restart the system"
+	read
 	sudo reboot	
 	
-
-
 fi
