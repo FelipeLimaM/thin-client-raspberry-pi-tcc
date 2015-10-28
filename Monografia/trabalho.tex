@@ -99,7 +99,7 @@
 \tipotrabalho{Trabalho de Conclusão de Curso em Ciência da Computação}
 % O preambulo deve conter o tipo do trabalho, o objetivo, 
 % o nome da instituição e a área de concentração 
-\preambulo{Este  exemplar  corresponde  à  redação  finalda
+\preambulo{Este  exemplar  corresponde  à  redação  final da
 monografia da disciplina Projeto Final de
 Curso devidamente corrigida e defendida
 por \imprimirautor \  e aprovada pela
@@ -394,7 +394,7 @@ Bacharel em Ciência da Computação.}
 
 A Deus por ter me dado saúde e força para superar as dificuldades.
 
-Obrigado aos meus pais, pelo amor, incentivo e apoio incondicional, sempre me fizendo entender que o futuro é feito a partir da constante dedicação no presente!
+Obrigado aos meus pais, pelo amor, incentivo e apoio incondicional, sempre me fazendo entender que o futuro é feito a partir da constante dedicação no presente!
 
 A esta universidade, seu corpo docente, direção e administração que oportunizaram a janela que hoje vislumbro um horizonte superior, eivado pela acendrada confiança no mérito e ética aqui presentes.
 
@@ -440,22 +440,22 @@ Meu agradecimento ao Jean Barbosa Siqueira, pela grande ajuda no desenvolvimento
 % resumo em português
 \setlength{\absparsep}{18pt} % ajusta o espaçamento dos parágrafos do resumo
 \begin{resumo}
-O trabalho consiste no estudo de conceitos sobre o uso do \textit{Raspberry PI} como um \textit{thin client} e na criação de um ambiente \textit{thin client}, sendo possível verificar as vantagens e desvantagens da utilização do \textit{Raspberry PI}. O estudo tem a intenção de auxiliar na decisão que criar, ou não, um ambiente \textit{thin client} usando \textit{Raspberrys PI} e também mostrar a viabilidade da subistituição dos \textit{thin clients} de uma ambiente já implantado, sendo esses \textit{thin clients}, computadores desktop. É descrito todos os passos para a criação de um ambiente \textit{thin client} e também os passos para a utilização do \textit{Raspberry PI} com um \textit{thin client}, com essas informações foi implantado um ambiente \textit{thin client}, para a execução de testes tornando possível a captura de dados que possibilitaram a construção dos resultados. Resultados claros e objetivos sobre a utilização do \textit{Raspberry PI} como um \textit{thin client}, mostrando os problemas de usabilidade e as vantagens econômica dessa utilização. Vantagem como o custo de manutenção e de implantação de um ambiente com \textit{Raspberry PI}, além de apresentar o desempenho do \textit{Raspberry PI} no consumos dos recursos de \textit{hardware} disponíveis no servidor.
+O trabalho consiste no estudo de conceitos sobre o uso do \textit{Raspberry PI} como um \textit{thin client} e na criação de um ambiente \textit{thin client}, sendo possível verificar as vantagens e desvantagens da utilização do \textit{Raspberry PI}. O estudo tem a intenção de auxiliar na decisão que criar, ou não, um ambiente \textit{thin client} usando \textit{Raspberrys PI} e também mostrar a viabilidade da substituição  dos \textit{thin clients} de um ambiente já implantado, sendo esses \textit{thin clients}, computadores \textit{desktop}. É descrito todos os passos para a criação de um ambiente \textit{thin client} e também os passos para a utilização do \textit{Raspberry PI} com um \textit{thin client}, com essas informações foi implantado um ambiente \textit{thin client}, para a execução de testes tornando possível a captura de dados que possibilitaram a construção dos resultados. Resultados claros e objetivos sobre a utilização do \textit{Raspberry PI} como um \textit{thin client}, mostrando os problemas de usabilidade e as vantagens econômica dessa utilização. Vantagem como o custo de manutenção e de implantação de um ambiente com \textit{Raspberry PI}, além de apresentar o desempenho do \textit{Raspberry PI} no consumo dos recursos de \textit{hardware} disponíveis no servidor.
 
 
- \textbf{Palavras-chave}: LTSP, Teste de performance, Ambiente thin client.	%TODO
+ \textbf{Palavras-chave}: thin client; Raspberry Pi; LTSP.	%TODO
 \end{resumo}
 
 % resumo em inglês
 \begin{resumo}[Abstract]
  \begin{otherlanguage*}{english}
    
-   The work consists of studying concepts on using the Raspberry PI as a thin client and to create a thin client environment, it is possible to check the advantages and disadvantages of using the Raspberry PI. The study is intended to assist in the decision to create, or not, a thin client environment using \textit{Raspberrys PI} and also show the feasibility of replacing the thin clients to an already deployed environment, and these thin clients, desktop computers. It is described all the steps to creating a thin client environment and also the steps for using the Raspberry PI with a thin client with this information was deployed a thin-client environment for running tests making it possible to capture data They allowed the construction of results. Clear and objective results on the use of the Raspberry PI as a thin client, showing the usability issues and the economic advantages of such use. Advantage as the cost of maintenance and deployment of an environment with Raspberry PI, besides presenting the performance of Raspberry PI in hardware resources of consumption available on the server.
+   The work consists of studying concepts on using the Raspberry PI as a thin client and to create a thin client environment, it is possible to check the advantages and disadvantages of using the Raspberry PI. The study is intended to assist in the decision to create, or not, a thin client environment using \textit{Raspberrys PI} and also show the feasibility of replacing the thin clients to an already deployed environment, and these thin clients, \textit{desktop} computers. It is described all the steps to creating a thin client environment and also the steps for using the Raspberry PI with a thin client with this information was deployed a thin-client environment for running tests making it possible to capture data They allowed the construction of results. Clear and objective results on the use of the Raspberry PI as a thin client, showing the usability issues and the economic advantages of such use. Advantage as the cost of maintenance and deployment of an environment with Raspberry PI, besides presenting the performance of Raspberry PI in hardware resources of consumption available on the server.
 
    \vspace{\onelineskip}
  
    \noindent 
-   \textbf{Keywords}: LTSP, Performance test, Thin client environment.
+   \textbf{Keywords}: thin client; Raspberry Pi; LTSP.
  \end{otherlanguage*}
 \end{resumo}
 
@@ -553,6 +553,7 @@ O trabalho consiste no estudo de conceitos sobre o uso do \textit{Raspberry PI} 
 \item[USB] Universal Serial Bus
 \item[V] Volts
 \item[VGA] Video Graphics Array
+
 \end{siglas}
 
 % -----------------------------------------------------------------------------------------------------------
@@ -601,7 +602,7 @@ Este trabalho envolve o estudo de conceitos sobre o uso do \textit{Raspberry PI}
 
 Nos capítulos \ref{refe:thinclient} e \ref{refe:raspberry} referente ao referencial teórico, será introduzido o conhecimento necessário para um bom entendimento sobre  \textit{thin client} e \textit{Raspberry PI}, explicando cada um, mostrando os principais produtos no mercado, e suas aplicações bem sucedidas. 
 
-No capítulo \ref{AmbienteTest} é apresentado os equipamentos usados nos testes, além da descrição de como foi executados os testes. Em seguida nos capítulos \ref{confServ} e \ref{confRasp} é descrito os passos para a configuração do ambiente, afim de coletar os dados e medir o desempenho do \textit{Raspberry PI} na utilização da interface gráfica e na utilização dos recursos do servidor mostrados no capítulo \ref{result}, gerando resultados que são apresentados em gráficos.
+No capítulo \ref{AmbienteTest} é apresentado os equipamentos usados nos testes, além da descrição de como foi executado os testes. Em seguida nos capítulos \ref{confServ} e \ref{confRasp} é descrito os passos para a configuração do ambiente, afim de coletar os dados e medir o desempenho do \textit{Raspberry PI} na utilização da interface gráfica e na utilização dos recursos do servidor mostrados no capítulo \ref{result}, gerando resultados que são apresentados em gráficos.
 
 
 % -----------------------------------------------------------------------------------------------------------
@@ -620,9 +621,9 @@ No capítulo \ref{AmbienteTest} é apresentado os equipamentos usados nos testes
 \label{refe:thinclient}
 \section{O que é?}
 
-\textit{Thin client}, ou cliente magro (tradução literal), é um computador cliente em uma rede  com paradigma de computação centralizada (cliente-servidor), esse cliente possui poucos ou nenhum aplicativo instalado, sendo totalmente dependente do servidor. O servidor executa programas e armazena dados para seus clientes/\textit{thin clients}, facilitando o \textit{backup} e a atualização desse programas, além de compartilhar os recursos de \textit{hardware} como disco rigido, memória RAM, CPU, entre outros\cite{ComoFuncionaThinClient, tanenbaum2010sistemas}.
+\textit{Thin client}, ou cliente magro (tradução literal), é um computador cliente em uma rede  com paradigma de computação centralizada (cliente-servidor), esse cliente possui poucos ou nenhum aplicativo instalado, sendo totalmente dependente do servidor. O servidor executa programas e armazena dados para seus clientes/\textit{thin clients}, facilitando o \textit{backup} e a atualização desses programas, além de compartilhar os recursos de \textit{hardware} como disco rígido, memória RAM, CPU, entre outros \cite{ComoFuncionaThinClient, tanenbaum2010sistemas}.
 
-Existem aparelhos de \textit{thin client} que são equipamentos similares a computadores pessoais (PCs). O que difere esses equipamentos de um PC comum é sua estrutura interna, onde não necessariamente o aparelho de \textit{thin client} possui um disco rígido. Cabe ressaltar que a palavra "\textit{thin}" se refere a uma pequena imagem de \textit{boot} que é o processo de inicialização de qualquer sistema computacional\cite{ComoFuncionaThinClient}.
+Existem aparelhos de \textit{thin client} que são equipamentos similares a computadores pessoais (PCs). O que difere esses equipamentos de um PC comum é sua estrutura interna, onde não necessariamente o aparelho de \textit{thin client} possui um disco rígido. Cabe ressaltar que a palavra "\textit{thin}"\ se refere a uma pequena imagem de \textit{boot} que é o processo de inicialização de qualquer sistema computacional \cite{ComoFuncionaThinClient}.
 
 O ambiente de \textit{thin client} consiste em um servidor ligado a um ou mais \textit{thin clients}. Cada \textit{thin client} necessita de uma quantidade mínima de recurso de \textit{hardware} para sua utilização \cite{TopologiaClienteThin}. Um \textit{thin client} carrega um sistema operacional do servidor, permitindo o acesso aos  programas existentes no mesmo. A utilização desse cliente é análoga a um computador que funciona de maneira convencional \cite{ComoFuncionaThinClient, morimotoservidores}.
 
@@ -630,12 +631,12 @@ O \textit{hardware} disponível no servidor possibilita a estes dispositivos rea
 
 O ambiente funciona com computadores clientes que podem ser desprovidos de leitores de CD-ROM (\textit{Compact Disc Read-Only Memory}), unidades de disquetes e HD. Tornado o gerenciamento dos recursos centralizado no ambiente \textit{thin client}, uma vez que os  arquivos e aplicações são inseridos no servidor, pois é o único que necessita de disco rígido para seu funcionamento \cite{tanenbaum2010sistemas, ComoFuncionaThinClient}.
 
-Os \textit{thin clients} possui uma comunicação com o servidor através de uma rede local sendo uma das caracteristicas principais o fato do sistema operacional utilizado não estar na máquina acessada pelos usuário, e sim no servidor. Mas os dispositivos I/O (\textit{input/output}) como monitor, teclado e mouse, são componentes locais usados para o comunicação do usuário com o sistema, o que faz parecer que eles estão utilizando computadores independentes \cite{richards2007linux, ComoFuncionaThinClient}.
+Os \textit{thin clients} possui uma comunicação com o servidor através de uma rede local sendo uma das características principais o fato do sistema operacional utilizado não estar na máquina acessada pelos usuários, e sim no servidor. Mas os dispositivos I/O (\textit{input/output}) como monitor, teclado e mouse, são componentes locais usados para a comunicação do usuário com o sistema, o que faz parecer que eles estão utilizando computadores independentes \cite{richards2007linux, ComoFuncionaThinClient}.
 
 
-\section{Sotfwares}
+\section{Softwares}
 
-A implantação de uma infraestrutura com \textit{thin clients} necessita de \textit{softwares} e serviços específicos para que o servidor disponibilize todas as funcionalidades necessárias aos clientes. Atualmente existem algumas implementações no mercado que oferece tal suporte para que um computador transforme-se em servidor. As principais implementações são descritas a serguir.
+A implantação de uma infraestrutura com \textit{thin clients} necessita de \textit{softwares} e serviços específicos para que o servidor disponibilize todas as funcionalidades necessárias aos clientes. Atualmente existem algumas implementações no mercado que oferece tal suporte para que um computador transforme-se em servidor. As principais implementações são descritas a seguir.
 
 
 \subsection{LTSP}
@@ -649,7 +650,7 @@ O LTSP funciona em servidores \textit{Linux}, sendo uma solução flexível, de 
 
 \subsection{DRBL}
 
-DRBL ou \textit{Diskless Remote Boot in Linux}, fornece um ambiente semelhante ao LTSP. Esse \textit{software} funciona em distibuições Debian, Ubuntu, Red Hat, Fedora, CentOS e SuSE. O DRBL utiliza recursos de \textit{hardware} distribuídos, o que torna possível aos clientes terem acesso total ao \textit{hardware} local \cite{drbl}.
+DRBL ou \textit{Diskless Remote Boot in Linux}, fornece um ambiente semelhante ao LTSP. Esse \textit{software} funciona em distribuições Debian, Ubuntu, Red Hat, Fedora, CentOS e SuSE. O DRBL utiliza recursos de \textit{hardware} distribuídos, o que torna possível aos clientes terem acesso total ao \textit{hardware} local \cite{drbl}.
 
 O DRBL usa PXE/\textit{etherboot}\footnote{É um \textit{boot} remoto desenvolvido pela Intel, gravado na ROM da placa de rede que permite que o \textit{boot} através da rede, carregando todo o \textit{software} necessário a partir de um servidor previamente configurado \cite{pxe}.}, NFS e NIS\footnote{É um serviço desenvolvido pela SUN para a distribuir informação pela rede \cite{nis}.} (\textit{Network Information Service}) em seu funcionamento, não sendo necessário instalar o sistema operacional GNU/\textit{Linux} diretamente no disco rígido de cada cliente na rede, pois o disco rígido é opcional. Se um disco rígido estiver presente, o DRBL pode fazer uso dele como uma memória de SWAP\footnote{O swap é a memória virtual que funciona como uma extensão da memória RAM, que fica armazenada no disco.} \cite{drbl,piaui,Frank.drbl}.
 
@@ -663,7 +664,7 @@ O Thinstation é baseado em \textit{Linux}, mas é possível se conectar diretam
 
 Após a instalação do Thinstation, ele irá gerar uma imagem personalizada do sistema, onde podem funcionar como clientes de um servidor ou trabalhar como terminais autônomos, executando um ambiente gráfico local \cite{Thinstationl}.
 
-O Thinstation roda em \textit{hardware} PC comum (classe i686 32/64 bit) e pode também se utilizar computadores antigos como clientes de uma rede cliente-servidor. O cliente não necessita possuir um disco rígido, pois ele é inicializado pela rede. E dispositivos como disquete, HD, CD-ROM, USB (\textit{Universal Serial Bus}) e impressoras ligadas diretamente aos clientes não são suportados. A última versão estável é a versão 5.4 \cite{Thinstationl,piaui}.
+O Thinstation roda em \textit{hardware} PC comum (classe i686 32/64 bits) e pode também se utilizar computadores antigos como clientes de uma rede cliente-servidor. O cliente não necessita possuir um disco rígido, pois ele é inicializado pela rede. E dispositivos como disquete, HD, CD-ROM, USB (\textit{Universal Serial Bus}) e impressoras ligadas diretamente aos clientes não são suportados. A última versão estável é a versão 5.4 \cite{Thinstationl,piaui}.
 
 
 \section{Produtos}
@@ -683,7 +684,7 @@ No Brasil existe a empresa Thin Client Brasil, uma revendedora licenciada para a
 Processador			&ARM-A9 Dual Core 1GHz									\\
 RAM					&512MB													\\
 Chip Gráfico		&Graphics Card Type MALI400 1080P						\\
-Saida de vídeo		&VGA e HDMI												\\
+Saída  de vídeo		&VGA e HDMI												\\
 Dimensões			&11,3cm x 11,3cm x 2,4cm								\\
 Peso				&155g													\\
 Portas USB 			&3														\\
@@ -710,12 +711,12 @@ Valor		 		&R\$ 650,00												\\ \hline
 Processador			&ARM-A9 Dual Core 1GHz									\\
 RAM					&512MB													\\
 Chip Gráfico		&Graphics Card Type MALI400 1080P						\\
-Saida de vídeo		&VGA e HDMI												\\
+Saída de vídeo		&VGA e HDMI												\\
 Dimensões			&11,3cm x 11,3cm x 2,4cm								\\
 Peso				&155g													\\
 Portas USB 			&3														\\
 Saída de áudio 		&1 P2													\\
-Porta de rede 		&RJ-45 ,Wireless(3dbi)									\\
+Porta de rede 		&RJ-45 , Wireless(3dbi)									\\
 Power				&DC 5v/2A												\\
 Valor		 		&R\$ 699,00												\\ \hline 					
 \end{tabular}
@@ -737,7 +738,7 @@ Valor		 		&R\$ 699,00												\\ \hline
 Processador			&ARM11 800MHz											\\
 RAM					&128MB													\\
 Chip Gráfico		&--														\\
-Saida de vídeo		&--														\\
+Saída de vídeo		&--														\\
 Dimensões			&12cm x 17cm x 3cm										\\
 Peso				&~200g													\\
 Portas USB 			&3														\\
@@ -765,12 +766,12 @@ Valor		 		&R\$ 440,00												\\ \hline
 Processador			&ARM11 800MHz											\\
 RAM					&128MB													\\
 Chip Gráfico		&--														\\
-Saida de vídeo		&--														\\
+Saída de vídeo		&--														\\
 Dimensões			&12cm x 17cm x 3cm										\\
 Peso				&~200g													\\
 Portas USB 			&3														\\
 Saída de áudio 		&2 P2 (input e output)									\\
-Porta de rede 		&RJ-45 ,Wireless(3dbi)									\\
+Porta de rede 		&RJ-45 , Wireless(3dbi)									\\
 Valor		 		&R\$ 510,00												\\ \hline 			
 	
 \end{tabular}
@@ -793,7 +794,7 @@ Valor		 		&R\$ 510,00												\\ \hline
 Processador			&ARM11 800MHz											\\
 RAM					&128MB													\\
 Chip Gráfico		&--														\\
-Saida de vídeo		&--														\\
+Saída de vídeo		&--														\\
 Dimensões			&12cm x 17cm x 3cm										\\
 Peso				&~200g													\\
 Portas USB 			&3														\\
@@ -820,12 +821,12 @@ Valor		 		&R\$ 440,00												\\ \hline
 Processador			&ARM11 800MHz											\\
 RAM					&128MB													\\
 Chip Gráfico		&--														\\
-Saida de vídeo		&--														\\
+Saída de vídeo		&--														\\
 Dimensões			&12cm x 17cm x 3cm										\\
 Peso				&~200g													\\
 Portas USB 			&3														\\
 Saída de áudio 		&2 P2 (input e output)									\\
-Porta de rede 		&RJ-45 ,Wireless(3dbi)									\\
+Porta de rede 		&RJ-45 , Wireless(3dbi)									\\
 Valor		 		&R\$ 510,00												\\ \hline 			
 	
 \end{tabular}
@@ -849,7 +850,7 @@ Valor		 		&R\$ 510,00												\\ \hline
 Processador			&--														\\
 RAM					&--														\\
 Chip Gráfico		&--														\\
-Saida de vídeo		&VGA													\\
+Saída de vídeo		&VGA													\\
 Dimensões			&9,8cm x 9,8cm x 2,1cm									\\
 Peso				&~200g													\\
 Portas USB 			&4 + 1(mini USB)										\\
@@ -880,13 +881,13 @@ Na busca por mais modelos, foram encontradas algumas lojas que revendem esse tip
 Processador			&AMD G-Series T48E de 1,4 GHz e 2 núcleos				\\
 RAM					&DDR3 2 GB												\\
 Chip Gráfico		&Radeon HD 6250											\\
-Saida de vídeo		&DisplayPort, DVI-I 									\\
+Saída de vídeo		&DisplayPort, DVI-I 									\\
 Resolução de vídeo	&2560 x 1600, 1920 x 1200								\\
 Dimensões			&6,7cm x 1,6cm x 7,3cm									\\
 Peso				&0,93kg													\\
 Protocolo			& --													\\
 Portas USB 			&2														\\
-Saída de áudio 		&mini de 1/8 polegadas, Alto-falante mono interno		\\
+Saída de áudio 		&Mini de 1/8 polegadas, Alto-falante mono interno		\\
 Porta de rede 		&RJ-45, wireless										\\
 Power				&--														\\
 Valor		 		&R\$ 2.030,00										\\ \hline 					
@@ -916,8 +917,8 @@ Valor		 		&R\$ 2.030,00										\\ \hline
 \multicolumn{2}{l}{\textbf{Especificação}}          						\\ \hline
 Processador			&Cirrus Logic EP9307 ARM, dual-core de 200 MHz				\\
 RAM					&64 MB													\\
-Chip Gráfico		& não possui											\\
-Saida de vídeo		&VGA													\\
+Chip Gráfico		& Não possui											\\
+Saída de vídeo		&VGA													\\
 Resolução de vídeo	&2560 x 1600, 1920 x 1200								\\
 Dimensões			&9,5cm x 15cm x 3cm										\\
 Peso				&0,93kg													\\
@@ -947,8 +948,8 @@ Valor				&R\$ 326,00 											\\ \hline
 \multicolumn{2}{l}{\textbf{Especificação}}          						\\ \hline
 Processador			&800 mhz												\\
 RAM					&128m													\\
-Chip Gráfico		& não possui											\\
-Saida de vídeo		&VGA													\\
+Chip Gráfico		& Não possui											\\
+Saída de vídeo		&VGA													\\
 Resolução de vídeo	&2560 x 1600, 1920 x 1200								\\
 Dimensões			&11.5cm x 11.5cm x 2.5cm								\\
 Portas USB 			&3														\\
@@ -975,7 +976,7 @@ Valor		 		&R\$ 420,00												\\ \hline
 
 \section{Aplicações}
 
-A maioria dos recursos computacionais em sistemas desktop não é plenamente aproveitada. A tecnologia \textit{thin client} é uma solução que otimiza o funcionamento do servidor, diminuindo o tempo que o computador permanece ocioso, minimizando a subutilização de seus recursos \cite{thinclientbrasil}. 
+A maioria dos recursos computacionais em sistemas \textit{desktop} não é plenamente aproveitada. A tecnologia \textit{thin client} é uma solução que otimiza o funcionamento do servidor, diminuindo o tempo que o computador permanece ocioso, minimizando a subutilização de seus recursos \cite{thinclientbrasil}. 
 
 Com a utilização de \textit{thin clients}, torna-se possível a implantação de vários clientes na rede, permitindo o acesso aos recursos disponibilizados pelo servidor. Os requisitos de \textit{hardware} do servidor irá determinar o número de terminais, o que deve ser bem pensado antes de elaborar e formatar o ambiente utilizado \cite{thinclientbrasil}. 
 
@@ -1004,7 +1005,7 @@ Cabe ressaltar que existem estabelecimentos em que a tecnologia \textit{thin cli
 \end{alineas}
 
 
-Além de ser bastante econômico, os aparelhos de \textit{thin client} são ecologicamente corretos. O consumo de energia é bem menor, comparado à soluções convencionais e também gera menos lixo eletrônico no meio ambiente, como sendo apenas alguns dos benefícios que podem ser aproveitados, através da implantação desta estrutura. Logo abaixo há uma lista de beneficios da utilização do \textit{thin client} de acordo com a \citeonline{thinclientbrasil}.
+Além de ser bastante econômico, os aparelhos de \textit{thin client} são ecologicamente corretos. O consumo de energia é bem menor, comparado às soluções convencionais e também gera menos lixo eletrônico no meio ambiente, como sendo apenas alguns dos benefícios que podem ser aproveitados, através da implantação desta estrutura. Logo abaixo há uma lista de benefícios da utilização do \textit{thin client} de acordo com a \citeonline{thinclientbrasil}.
 
 \begin{alineas}
 \item Baixo investimento inicial;
@@ -1021,18 +1022,18 @@ Além de ser bastante econômico, os aparelhos de \textit{thin client} são ecol
 \item Possui maior vida útil, gerando menos lixo eletrônico.
 \end{alineas}
 
-As principais vantagens em utilizar uma infraestrutura formada por \textit{thin clients} estão relacionadas à economia de energia, \textit{software} e \textit{hardware}. Na parte referente à economia de energia, é calculado o consumo direto e indireto, pois um \textit{thin client} consome cerca de 5\% da energia de um computador convencional. Além do consumo próprio deve se levar em conta a economia de energia elétrica relacionada a utilização de ar-condicionado, já que os aparelhos de \textit{thin client} dissipam menos calor para o ambiente \cite{EmailThinClient}.
+As principais vantagens em utilizar uma infraestrutura formada por \textit{thin clients} estão relacionadas à economia de energia, \textit{software} e \textit{hardware}. Na parte referente à economia de energia, é calculado o consumo direto e indireto, pois um \textit{thin client} consome cerca de 5\% da energia de um computador convencional. Além do consumo próprio deve se levar em conta a economia de energia elétrica relacionada a utilização de ar\-condicionado, já que os aparelhos de \textit{thin client} dissipam menos calor para o ambiente \cite{EmailThinClient}.
 	 
 
 \begin{table}[h!]
 \IBGEtab{%
-	\caption{Tabela informando o calculo para o consumo de energia elétrica anual}%
+	\caption{Tabela informando o cálculo  para o consumo de energia elétrica anual}%
 
 }{%
 \begin{tabular}{p{3,5cm}p{7cm}p{2cm}}\hline
 %Solução 				&Descrição																	& Custo			\\ \hline
 Solução Convencional	& Gasto anual em Energia para 30 computadores								&R\$ 11.484,00	\\
-Solução \textit{ThinClient}		& Gasto anual em Energia para 01 Servidor + 30 Terminais \textit{thin clients}		&R\$  1.041,22 	\\
+Solução \textit{thin client}		& Gasto anual em Energia para 01 Servidor + 30 Terminais \textit{thin clients}		&R\$  1.041,22 	\\
 \hline										
 Economia				&																			&R\$ 10.442,78	\\ 	\hline				
 \end{tabular}
@@ -1049,13 +1050,13 @@ A economia referente ao \textit{software}, diz respeito as licenças de aplicati
 
 \begin{table}[h!]
 \IBGEtab{%
-	\caption{Tabela informando o calculo para manutenção anual (\textit{hardware}/\textit{software})}%
+	\caption{Tabela informando o cálculo  para manutenção anual (\textit{hardware}/\textit{software})}%
 
 }{%
 \begin{tabular}{p{3,5cm}p{7cm}p{2cm}}\hline
 %Solução 				&Descrição																	& Custo			\\ \hline
 Solução Convencional	& Gasto anual em Energia para 30 computadores								&R\$  10.800,00 	\\
-Solução \textit{ThinClient}		& Gasto anual em Energia para 01 Servidor + 30 Terminais \textit{thin clients}		&R\$   3.600,00  	\\
+Solução \textit{thin client}		& Gasto anual em Energia para 01 Servidor + 30 Terminais \textit{thin clients}		&R\$   3.600,00  	\\
 \hline										
 Economia				&																			&R\$  7.200,00 	\\ 	\hline				
 \end{tabular}
@@ -1085,7 +1086,7 @@ O \textit{Raspberry PI} é um computador de baixo custo financeiro, baseado na a
 
 O projeto surgiu originalmente como uma ferramenta para o aprendizado de linguagens de programação, especialmente em países de terceiro mundo, onde queriam oferecer um computador barato o suficiente para que cada estudante pudesse praticar em casa \cite{ClubeHardware}.
 
-Em 2006, Eben Upton e sua equipe contendo professores, acadêmicos e entusiastas da computação em torno dele, desenvolveram o primeiros conceitos para o \textit{Raspberry PI}, sendo estebaseado no microcontrolador Atmel ATmega. Em 2009, foi criada oficialmente a \textit{Raspberry PI Foundation} \cite{eben2013raspberry}. 
+Em 2006, Eben Upton e sua equipe contendo professores, acadêmicos e entusiastas da computação em torno dele, desenvolveram os primeiros conceitos para o \textit{Raspberry PI}, sendo este baseado no microcontrolador Atmel ATmega. Em 2009, foi criada oficialmente a \textit{Raspberry PI Foundation} \cite{eben2013raspberry}. 
 
 Em agosto de 2011, foi produzida a primeira série com aproximadamente 50 placas, elas serviram principalmente como uma plataforma para desenvolvedores, para depuração e demonstração das capacidades do produto. Em dezembro de 2011, foi a vez da série beta onde foi produzido 25 placas, já baseada no \textit{layout} de produção \cite{Werner.Raspberry}.
 
@@ -1102,7 +1103,7 @@ O \textit{Raspberry PI} destaca-se por ter o tamanho de um cartão de crédito e
 \begin{description}
 
 \item[Processador]
-Em alguns modelos, o \textit{Raspberry PI} possui um processador de \textit{system-on-chip} de 32 bits com 700 MHz, mas no modelo B2 possui um \textit{quad-core} com 900MHz. Todos os modelos são construídos sobre a arquitetura ARM. O chips ARM apresenta em uma variedade de arquiteturas com diferentes núcleos configurados. O modelo B+ tem 512MB de memória RAM, já o modelo B2 vem com 1GB de RAM, enquanto os outro continham apenas 256 MB.
+Em alguns modelos, o \textit{Raspberry PI} possui um processador de \textit{system-on-chip} de 32 bits com 700 MHz, mas no modelo B2 possui um \textit{quad-core} com 900MHz. Todos os modelos são construídos sobre a arquitetura ARM. O chip ARM apresenta em uma variedade de arquiteturas com diferentes núcleos configurados. O modelo B+ tem 512MB de memória RAM, já o modelo B2 vem com 1GB de RAM, enquanto os outro continham apenas 256 MB.
  
 \item[\textit{Slot} para cartão de memória]
 O armazenado é feito em um cartão de memória, pois não possui um disco rígido. O \textit{slot} varia de modelo a modelo, podendo ser SD ou MicroSD.
@@ -1131,7 +1132,7 @@ Possui o propósito de entrada e saída de corrente (GPIO) pinos. Eles são um c
 
 \end{description}
 
-Existem cinco modelos de \textit{Raspberry PI}, e a cada modelo lançado, o produto é aprimorado, sendo que a ultima versão lançada pode executar quase todas distribuições ARM GNU/\textit{Linux}, incluindo Ubuntu Snappy Core, e também o Microsoft Windows 10 \cite{raspberrypi.org}. Nas tabelas de \ref{tab:raspberry_inicio} a \ref{tab:raspberry_fim} possui os modelos produzidos comercialmente:
+Existem cinco modelos de \textit{Raspberry PI}, e a cada modelo lançado, o produto é aprimorado, sendo que a última versão lançada pode executar quase todas distribuições ARM GNU/\textit{Linux}, incluindo Ubuntu Snappy Core, e também o Microsoft Windows 10 \cite{raspberrypi.org}. Nas tabelas de \ref{tab:raspberry_inicio} a \ref{tab:raspberry_fim} possui os modelos produzidos comercialmente:
 
 
 
@@ -1151,8 +1152,8 @@ Existem cinco modelos de \textit{Raspberry PI}, e a cada modelo lançado, o prod
 	Processador			&700 MHz ARM1176JZF-S core								\\
 	RAM					&256 MB													\\
 	Chip Gráfico		&Broadcom VideoCore IV @ 250 MHz						\\
-	Saida de vídeo		&RCA Composto e HDMI									\\
-	Cartão de memoria	&SD cards												\\
+	Saída de vídeo		&RCA Composto e HDMI									\\
+	Cartão de memória	&SD cards												\\
 	Portas USB 			&1														\\
 	Saída de áudio 		&Conector RCA, HDMI										\\
 	Porta de rede 		& não possui											\\
@@ -1178,8 +1179,8 @@ Existem cinco modelos de \textit{Raspberry PI}, e a cada modelo lançado, o prod
 Processador			&700 MHz ARM1176JZF-S core								\\
 RAM					&256 MB													\\
 Chip Gráfico		&Broadcom VideoCore IV @ 250 MHz						\\
-Saida de vídeo		&Composite, HDMI e Raw LCD								\\
-Cartão de memoria	&SD cards												\\
+Saída de vídeo		&Composite, HDMI e Raw LCD								\\
+Cartão de memória	&SD cards												\\
 Portas USB 			&1														\\
 Saída de áudio 		&Conector de 3.5 mm (Composite), HDMI								\\
 Porta de rede 		& não possui											\\
@@ -1206,8 +1207,8 @@ Valor		 		& R\$ 189,90											\\ \hline
 Processador			&700 MHz ARM1176JZF-S core								\\
 RAM					&256 MB ou  512 MB (compartilhada com GPU) 			\\
 Chip Gráfico		&Broadcom VideoCore IV @ 250 MHz						\\
-Saida de vídeo		&RCA Composto e HDMI									\\
-Cartão de memoria	&SD cards												\\
+Saída de vídeo		&RCA Composto e HDMI									\\
+Cartão de memória	&SD cards												\\
 Portas USB 			&2														\\
 Saída de áudio 		&Conector RCA, HDMI								\\
 Porta de rede 		& RJ-45													\\
@@ -1235,8 +1236,8 @@ Valor		 		& Não encontrado no mercado								\\ \hline
 Processador			&700 MHz ARM1176JZF-S core								\\
 RAM					&256 MB ou  512 MB (compartilhada com GPU) 			\\
 Chip Gráfico		&Broadcom VideoCore IV @ 250 MHz						\\
-Saida de vídeo		&Composite, HDMI e Raw LCD 								\\
-Cartão de memoria	&MicroSD card											\\
+Saída de vídeo		&Composite, HDMI e Raw LCD 								\\
+Cartão de memória	&MicroSD card											\\
 Portas USB 			&4														\\
 Saída de áudio 		&Conector de 3.5 mm (Composite), HDMI								\\
 Porta de rede 		& RJ-45													\\
@@ -1264,8 +1265,8 @@ Valor		 		& R\$ 229,90											\\ \hline
 Processador			&900 MHz Quad-core ARM Cortex-7						\\
 RAM					&1GB													\\
 Chip Gráfico		& VideoCore IV 3D graphics core						\\
-Saida de vídeo		&Composite, HDMI e Raw LCD 								\\
-Cartão de memoria	&MicroSD card											\\
+Saída de vídeo		&Composite, HDMI e Raw LCD 								\\
+Cartão de memória	&MicroSD card											\\
 Portas USB 			&4														\\
 Saída de áudio 		&Conector de 3.5 mm (Composite), HDMI								\\
 Porta de rede 		& RJ-45													\\
@@ -1291,16 +1292,16 @@ As utilidades do \textit{Raspberry PI} têm se multiplicado, possibilitando dese
 
 \item[Otto]A câmera Otto funciona como uma máquina fotográfica que cria GIFs (\textit{Graphics Interchange Format}) ao invés de fotos. A câmera sincroniza com o smartphone de modo que você pode facilmente compartilhar os GIFs \cite{otto}.
   
-\item[Professor de braile] O projeto MUDRA visa ensinar crianças com deficiência visual a ler em braile, usando um \textit{Raspberry PI}. O sistema indica sonoramente através de um ’teclado’ qual a  letra \cite{mudra}.
+\item[Professor de braile] O projeto MUDRA visa ensinar crianças com deficiência visual a ler em braile, usando um \textit{Raspberry PI}. O sistema indica sonoramente através de um "teclado"\ qual a  letra \cite{mudra}.
 
 \item[Automação de casas] Possibilita ligar e desligar as luzes remotamente ou qualquer outro objeto ligado a casa por meio do \textit{Raspberry PI}, que também dá o acesso para outros dispositivos o controlarem também \cite{AplicacaoRaspberry}.
 
 \item[Servidor web pessoal] O \textit{Raspberry PI} pode ser ligado à internet e ser usado como servidor web, para hospedagem sem ter que pagar taxas mensais, além de ter um consumo de energia bem menor.
 
 
-\item[Câmera Pi - Camera  DSLR com computador embutido] Incorpora um \textit{Raspberry PI} em uma câmera DSLR (\textit{Digital Single-Lens Reflex}), permitindo que um fotógrafo transmita para um PC ou \textit{tablet}, as imagens capturas, sendo que o controle remoto da câmera pode ser através de um \textit{smartphone}, de qualquer lugar do mundo. Também permite programar a câmera para tirar fotos em intervalos precisos \cite{cameraPI}.
+\item[Câmera Pi - Câmera  DSLR com computador embutido] Incorpora um \textit{Raspberry PI} em uma câmera DSLR (\textit{Digital Single-Lens Reflex}), permitindo que um fotógrafo transmita para um PC ou \textit{tablet}, as imagens capturas, sendo que o controle remoto da câmera pode ser através de um \textit{smartphone}, de qualquer lugar do mundo. Também permite programar a câmera para tirar fotos em intervalos precisos \cite{cameraPI}.
 
-\item[Mesa de fliperama] Este projeto envolve um pouco de trabalho com madeira, mas o resultado é um mesa de arcada controlada pelo \textit{Raspberry PI} que lhe permite jogar seus antigos jogos favoritos de mesa, utilizando uma tela \cite{AplicacaoRaspberry}.
+\item[Mesa de fliperama] Este projeto envolve um pouco de trabalho com madeira, mas o resultado é uma mesa de arcada controlada pelo \textit{Raspberry PI} que lhe permite jogar seus antigos jogos favoritos de mesa, utilizando uma tela \cite{AplicacaoRaspberry}.
 
 \item[BerryTerminal] É uma distribuição \textit{Linux} minimalista que deixa o \textit{Raspberry PI} apto a acessar uma rede \textit{thin client}. Ele permite aos usuários acessar um servidor LTSP \cite{berryterminal}.
 
@@ -1316,13 +1317,13 @@ As utilidades do \textit{Raspberry PI} têm se multiplicado, possibilitando dese
 
 \chapter{Ambiente de desenvolvimento}
 \label{AmbienteTest}
-Para o desenvolvimento da monografia, foi feito um levantamento das tecnologias utilizadas, afim de conhecer todos os \textit{softwares} e suas configurações necessários para a implantação de um ambiente \textit{thin client} e assim verificar a usabilidade do \textit{Raspberry PI} como um \textit{thin client}. Para verificar a usabilidade, foi desenvolvido uma bateria de testes, onde foi utilizado um servidor, um \textit{Raspberry PI} e também um computador desktop funcionando como \textit{thin client}. 
+Para o desenvolvimento da monografia, foi feito um levantamento das tecnologias utilizadas, afim de conhecer todos os \textit{softwares} e suas configurações necessários para a implantação de um ambiente \textit{thin client} e assim verificar a usabilidade do \textit{Raspberry PI} como um \textit{thin client}. Para verificar a usabilidade, foi desenvolvido uma bateria de testes, onde foi utilizado um servidor, um \textit{Raspberry PI} e também um computador \textit{desktop} funcionando como \textit{thin client}. 
 
-No servidor foi utilizado o Ubuntu 12.04 LTS que é um sistema operacional de código aberto, construído a partir do núcleo \textit{Linux} e baseado no Debian\cite{ubuntu}. Foi utilizado o \textit{software} LTSP (Linux Terminal Server Project) para implantação do ambiente \textit{thin client}, devido a sua ampla comunidade para auxilar na sua implantação. 
+No servidor foi utilizado o Ubuntu 12.04 LTS que é um sistema operacional de código aberto, construído a partir do núcleo \textit{Linux} e baseado no Debian \cite{ubuntu}. Foi utilizado o \textit{software} LTSP (Linux Terminal Server Project) para implantação do ambiente \textit{thin client}, devido a sua ampla comunidade para auxiliar na sua implantação. 
 
 Outro motivo para a utilização do LTSP é a existência de distribuição \textit{Linux} para \textit{Raspberry PI} que permite aos usuários acessar qualquer servidor LTSP. Essa distribuição é chamada de BerryTerminal. O BerryTerminal é uma pequena distribuição \textit{Linux} projetada para transformar o \textit{Raspberry PI} em um \textit{thin client} \cite{berryterminal}.
 
-Os testes foram executados utilizando um servidor com processador Intel i5-4210U com 1,7Ghz com 4 GB de memória RAM DDR3 com velocidade de1600 Mhz, uma plaça gráfica NVIDIA GeForce GT 740M de 2GB e 250GB de HD SSD (\textit{Solid-State Drive}) com escrita de sequencial de até 520 MB/s.
+Os testes foram executados utilizando um servidor com processador Intel i5-4210U com 1,7Ghz com 4 GB de memória RAM DDR3 com velocidade de1600 Mhz, uma placa gráfica NVIDIA GeForce GT 740M de 2GB e 250GB de HD SSD (\textit{Solid-State Drive}) com escrita de sequencial de até 520 MB/s.
 	
 O Rapsberry PI utilizado é o modelo B. E o computador utilizado para comparação possui processador Intel i5-2400 com 3,1Ghz, memória RAM de 8GB DDR3, placa de vídeo \textit{off-board} 1GB DDR3.
 
@@ -1330,20 +1331,20 @@ A bateria de testes possui quatro testes, todos possuem o servidor e um \textit{
 
 O terceiro teste é feito com o \textit{Raspberry PI} como \textit{thin client} executando um script simulando a ações de um usuário. O quarto teste é igual ao terceiro mas substituindo o  \textit{Raspberry PI} por um computador. O script utilizando, simula um usuário abrindo vários programas já inclusos na instalação do sistema operacional, como aplicações do LibreOffice (Writer, Calc e o Draw). Também foi iniciado o navegador Firefox e dois games, Sudoku e o Paciência. O \textit{script} utilizado inicializou as aplicações em tempos predeterminados, que pode ser visto no Apêndice \ref{script:ExecClient}.
 
-Os dois últimos testes dessa bateria serviram para mostrar uma comparação entre o \textit{Raspberry PI} e um computador relacionado ao consumo de memória e transferência de dados pela rede. A partir do terceiro teste foram executados \textit{scripts} no servidor para coletar dados sobre o uso dos recursos. Cada teste foi executado três vezes, afim que gerar uma media de todos os valores obtidos. 
+Os dois últimos testes dessa bateria serviram para mostrar uma comparação entre o \textit{Raspberry PI} e um computador relacionado ao consumo de memória e transferência de dados pela rede. A partir do terceiro teste foram executados \textit{scripts} no servidor para coletar dados sobre o uso dos recursos. Cada teste foi executado três vezes, afim que gerar uma média de todos os valores obtidos. 
 
 
 \chapter{Servidor}
 \label{confServ}
 Para que um computador venha a se tornar um servidor LTSP, é necessário instalar um pacote contido em um dos repositórios padrões do Ubuntu. O pacote se chama  \textit{ltsp-server-standalone}. No ato da instalação ele menciona outros pacotes que são  essenciais para fornecer o serviço aos seus \textit{thin clients}.
 
-Para a instalação dos pacotes foi utilizado o recurso de \textit{apt-get} que permite a instalação, a atualização de pacotes e a solução das dependências do pacotes\cite{apt_get}. O comando usado para a instalação do pacote principal LTSP no Ubuntu usando foi:
+Para a instalação dos pacotes foi utilizado o recurso \textit{apt-get}, que permite a instalação, a atualização de pacotes e a solução das dependências dos pacotes \cite{apt_get}. O comando usado para a instalação do pacote principal LTSP no Ubuntu usando foi:
 \begin{verbatim}
 		sudo apt-get install ltsp-server-standalone
 \end{verbatim}
 Após a instalação do pacote \textit{ltsp-server-standalone} com suas dependências o computador já possuía todos os serviços e configurações base para executar a função de servidor. Mas foi necessário definir configurações que variam de cada computador usado e de cada rede local. 
 
-As alterações foram feitas em arquivos de configuração, para definir qual interface de rede foi disponibilizada para os \textit{thin clients} acessarem o servidor,  configurar o DHCP\footnote{É um protocolo que permite todos os computadores da rede recebam suas configurações de rede automaticamente a partir de um servidor central\cite{dhcp}.} (\textit{Dynamic Host Configuration Protocol}) para distribuir os IPs (\textit{Internet Protocol}) aos computadores. Para determinar qual interface de rede foi usada pelos \textit{thin clients}, foi alterado o seguinte arquivo:
+As alterações foram feitas em arquivos de configuração, para definir qual interface de rede foi disponibilizada para os \textit{thin clients} acessarem o servidor,  configurar o DHCP\footnote{É um protocolo que permite todos os computadores da rede recebam suas configurações de rede automaticamente a partir de um servidor central\cite{dhcp}.}\ (\textit{Dynamic Host Configuration Protocol}) para distribuir os IPs (\textit{Internet Protocol}) aos computadores. Para determinar qual interface de rede foi usada pelos \textit{thin clients}, foi alterado o seguinte arquivo:
 \begin{verbatim}
 	/etc/default/isc-dhcp-server
 \end{verbatim}  
@@ -1352,11 +1353,11 @@ Dentro desse arquivo deve possui uma variável com o nome de \textit{INTERFACES}
 	INTERFACES = "eth0"
 \end{verbatim}
 
-O Próximo passo é configurar o serviço de DHCP. A placa de rede ligada aos \textit{thin clients} deve ter um endereço IP fixo e distribuir para cada cliente um endereço IP, informando a mascara da rede e o \textit{gateway} padrão. Para configurar o serviço foi acessado o arquivo: 
+O Próximo passo é configurar o serviço de DHCP. A placa de rede ligada aos \textit{thin clients} deve ter um endereço IP fixo e distribuir para cada cliente um endereço IP, informando a máscara da rede e o \textit{gateway} padrão. Para configurar o serviço foi acessado o arquivo: 
 \begin{verbatim}
 /etc/network/interfaces
 \end{verbatim} 
-Nesse arquivo foi adicionado o trecho apresentado a seguir, caso não exista linhas de configurações para a interface desejada. A linha iniciada com "auto ..."\ lista as interfaces que devem ser ativadas automaticamente e as demais linhas abaixo possui a configuração da sua respectiva interfaces \cite{ClubeHardware,LTSP5}. Foi adicionado as novas configurações no final do arquivo. 
+Nesse arquivo foi adicionado o trecho apresentado a seguir, caso não exista linhas de configurações para a interface desejada. A linha iniciada com "auto ..."\ lista as interfaces que devem ser ativadas automaticamente e as demais linhas abaixo possui a configuração da sua respectiva interface \cite{ClubeHardware,LTSP5}. Foi adicionado as novas configurações no final do arquivo. 
 \begin{verbatim}
 	...
 	auto eth0  
@@ -1366,11 +1367,11 @@ Nesse arquivo foi adicionado o trecho apresentado a seguir, caso não exista lin
 		network 192.168.0.0
 		broadcast 192.168.0.255
 \end{verbatim}
-A configuração supracitada foi usada para aproveitar a configuração padrão  do pacote \textit{ltsp-server-standalone}. Caso seja necessário alterar alguma das configurações, é necessário modificar o arquivo dhcpd.conf que esta localizado no diretório:
+A configuração supracitada foi usada para aproveitar a configuração padrão  do pacote \textit{ltsp-server-standalone}. Caso seja necessário alterar alguma das configurações, é necessário modificar o arquivo dhcpd.conf que está localizado no diretório:
 \begin{verbatim}
 /etc/ltsp/dhcpd.conf
 \end{verbatim}
-Nesse arquivo são encontradas as configurações relativas ao serviço de DHCP e também da distribuição de arquivos do servidor aos \textit{thin clients}. Este arquivo de configuração é próprio do ambiente \textit{thin client}. As alterações nesse arquivo afetará como o  serviço de DHCP do LTSP irá disponibilizar os recursos iniciais aos clientes.
+Nesse arquivo são encontradas as configurações relativas ao serviço de DHCP e também da distribuição de arquivos do servidor aos \textit{thin clients}. Este arquivo de configuração é próprio do ambiente \textit{thin client}. A alteração nesse arquivo afetará como o  serviço de DHCP do LTSP irá disponibilizar os recursos iniciais aos clientes.
 
 O próximo passo na configuração do servidor LTSP, é a criação da imagem do sistema utilizada pelos clientes LTSP. No entanto, os clientes que acessaram o servidor utilizando o \textit{Raspberry PI}, tiveram problemas com a interface Unity utilizada por padrão no Ubuntu a partir da versão 11.04. Para solucionar este problema foi alterada a interface padrão do Ubuntu para uma interface \textit{Gnome Classic} chamada de \textit{gnome-session-fallback}, baixada e instalada com o seguinte comando:
 \begin{verbatim}
@@ -1396,21 +1397,21 @@ O comando \textit{ltsp-build-client} pode ser dividido em quatro passos. No prim
 
 No passo três ele irá baixar da internet todos os programas e aplicativos existentes no SO do servidor. Esses programas são instalados e configurados no diretório pertencente ao sistema operacional do \textit{thin client}.  Em seguida, no último passo, ele monta uma imagem de disco que é armazenada em um local que todos os \textit{thin clients} acessam na hora de sua inicialização.
 
-Com a finalização desse comando, o servidor está apto a iniciar clientes LTSP pela interface de rede selecionada. E as alterações realizadas no SO do servidor, como instalação ou remoção de algum programa, não será repassadas aos clientes, pois são dois sistemas distintos.
+Com a finalização desse comando, o servidor está apto a iniciar clientes LTSP pela interface de rede selecionada. E as alterações realizadas no SO do servidor, como instalação ou remoção de algum programa, não serão repassadas aos clientes, pois são dois sistemas distintos.
 
 Como são dois sistemas operacionais distintos, um para o servidor e outro para os clientes, é possível acessar o SO do cliente para instalar e remover programas usando o terminal. Para efetuar essas modificações no SO do cliente, utiliza-se o seguinte comando:
 \begin{verbatim}
 sudo chroot /opt/ltsp/i386/ <comando desejado>
 \end{verbatim}
-Os comandos existentes são limitados devido ao sistema não estar em funcionamento. Um exemplo é acessar a maquina cliente executando o comando de \textit{ifconfig}. Será acusado um erro por não existir interface de rede para o SO informar.
+Os comandos existentes são limitados devido ao sistema não estar em funcionamento. Um exemplo é acessar a máquina cliente executando o comando de \textit{ifconfig}. Será acusado um erro por não existir interface de rede para o SO informar.
 
 Na execução de comando que gere alguma alteração no SO do cliente, a mesma só poderá ser visualizada após uma atualização na imagem de disco gerada no final do comando \textit{ltsp-build-client}, em um arquivo com a extensão .img usado como SO pelos \textit{thin clients}. Para atualizar esse arquivo, é necessário executar esse comando:
 \begin{verbatim}
 sudo ltsp-update-image
 \end{verbatim}
-Esse comando monta a imagem do SO do cliente da mesma maneira do que ocorre no quatro passo da execução do comando  \textit{ltsp-build-client}.
+Esse comando monta a imagem do SO do cliente da mesma maneira do que ocorre no quarto passo da execução do comando  \textit{ltsp-build-client}.
 
-Com o conhecimento de todos os passos para a construção de um servidor LTSP, foi desenvolvido um \textit{script}(disponivel no Apêndice \ref{script:servidor}) para a executar de todos os passos, deixando o computador/servidor configurado e pronto para ser usado como servidor LTSP. O script reconhece todas as interfaces de rede e permite escolher a interface que será usada pelos cliente LTSP para o acesso ao servidor. 
+Com o conhecimento de todos os passos para a construção de um servidor LTSP, foi desenvolvido um \textit{script}\ (disponivel no Apêndice \ref{script:servidor}) para a executar de todos os passos, deixando o computador/servidor configurado e pronto para ser usado como servidor LTSP. O script reconhece todas as interfaces de rede e permite escolher a interface que será usada pelos clientes LTSP para o acesso ao servidor. 
 
 \chapter{Raspberry PI}
 \label{confRasp}
@@ -1419,24 +1420,24 @@ A tarefa de utilizar um computador como \textit{thin client} é simples. Basta i
 
 O \textit{Raspberry PI} não possui nenhum tipo de \textit{software} embutido como a BIOS\footnote{É um programa de computador pré-gravado em memória permanente (\textit{firmware}) executado por um computador quando ligado. Ele é o suporte básico de acesso ao \textit{hardware} \cite{bios}.} (\textit{Basic Input/Output System}), ou seja, diferente de um computador que possui a BIOS, o \textit{Raspberry PI} de modo geral não pode iniciar \textit{boot} sem acessar seu modo de armazenamento principal, que é o cartão de memória. Por isso não é possível utilizar o \textit{Raspberry PI} sem um cartão de memória.
 
-	Então, para utilizar o \textit{Raspberry PI} como \textit{thin client}, foi usado um SO básico no cartão de memória para que pudesse ser inicializado pela rede, uma solução semelhante a usada em computadores antigos. Sendo assim utilizamos um projeto de chamado de BerryTerminal. 
+Então, para utilizar o \textit{Raspberry PI} como \textit{thin client}, foi usado um SO básico no cartão de memória para que pudesse ser inicializado pela rede, uma solução semelhante à usada em computadores antigos. Sendo assim utilizamos um projeto de chamado de BerryTerminal. 
 	
-Para isso é necessário baixar o projeto na pagina principal do BerryTerminal  disponível em \url{http://berryterminal.com/doku.php}. Com o download da versão comprimida, o processo e simples. Basta descompactar o arquivo dentro do um cartão de memória vazio. Caso use o projeto existente no GitHub, é necessario compilar o projeto executando o build.sh, e transferindo os arquivos de dentro pasta chamada "\textit{output}", criada após a compilação, para o cartão de memória vazio.
+Para isso é necessário baixar o projeto na página principal do BerryTerminal  disponível em \url{http://berryterminal.com/doku.php}. Com o download da versão comprimida, o processo e simples. Basta descompactar o arquivo dentro do um cartão de memória vazio. Caso use o projeto existente no GitHub, é necessário compilar o projeto executando o build.sh, e transferindo os arquivos de dentro pasta chamada "\textit{output}", criada após a compilação, para o cartão de memória vazio.
 
-Com isso, já é possível utilizar o \textit{Raspberry PI} como um \textit{thin client}. Isso se a saída de video utilizada for com um monitor com entrada Hdmi ou a saída de video secundaria, pois para utilizar o \textit{Raspberry PI} é necessário que uma das saídas de video estejam conectadas.
+Com isso, já é possível utilizar o \textit{Raspberry PI} como um \textit{thin client}. Isso se a saída de vídeo utilizada for com um monitor com entrada HDMI ou a saída de vídeo secundaria, pois para utilizar o \textit{Raspberry PI} é necessário que uma das saídas de vídeo estejam conectadas.
 
-Como os testes foram feitos em um laboratório onde os monitores só possuam entradas VGA, foi adquirido um adaptador que transforma a saida HDMI em VGA. Mas a tecnologia usada na saída do HDMI do \textit{Raspberry PI} não reconhece a conexão feita por um adaptador. Mediante a esse problema, foi alterado o arquivo de configuração dentro do cartão de memória com o nome:
+Como os testes foram feitos em um laboratório onde os monitores só possuam entradas VGA, foi adquirido um adaptador que transforma a saída HDMI em VGA. Mas a tecnologia usada na saída do HDMI do \textit{Raspberry PI} não reconhece a conexão feita por um adaptador. Mediante a esse problema, foi alterado o arquivo de configuração dentro do cartão de memória com o nome:
 \begin{verbatim}
 config.txt
 \end{verbatim}
-As configurações adicionadas dentro do arquivo tem o intuito de forçar a o reconhecimento do adaptador da maneira correta. Para esse feito foi adicionado três comandos no final do arquivo, cada um com seu respectivo valor. 
+As configurações adicionadas dentro do arquivo têm o intuito de forçar a o reconhecimento do adaptador da maneira correta. Para esse feito foi adicionado três comandos no final do arquivo, cada um com seu respectivo valor. 
 \begin{verbatim}
 …
 hdmi_force_hotplug=1
 hdmi_group=2
 hdmi_drive=2
 \end{verbatim}
-A utilização do \textit{hdmi force hotplug} com o valor 1 informado que a saída de video será o Hdmi, mesmo que o \textit{Raspberry PI} não tenha detectado. Isso é necessario porque o \textit{Raspberry PI} não identifica o conversor VGA. Com isso é cancelada a porta de saída de vídeo hdmi \cite{vga}.  
+A utilização do \textit{hdmi force hotplug} com o valor 1 informado que a saída de vídeo será o HDMI, mesmo que o \textit{Raspberry PI} não tenha detectado. Isso é necessário porque o \textit{Raspberry PI} não identifica o conversor VGA. Com isso é cancelada a porta de saída de vídeo hdmi \cite{vga}.  
 
 Já o \textit{hdmi group}, controla a resolução e frequência de saída. O valor 1 é usado com monitores de alta definição. E o valor 2 é usado para  conectar monitores de computador convencionais \cite{vga}. 
 
@@ -1458,23 +1459,23 @@ O \textit{hdmi drive}, altera a tensão da porta de saída, que tem os valores 1
 \chapter{Resultados obtidos}
 \label{result}
 
-Durante a implantação do servidor LTSP foi utilizado vários conteúdos existente em paginas web, comunidades e fóruns relacionados ao assunto, como as informações disponibilizadas por \citeonline{implantacao3}, \citeonline{implantacao1}, \citeonline{implantacao2}, \citeonline{morimoto2005redes}, \citeonline{implantacao4} e \citeonline{implantacao5}.
+Durante a implantação do servidor LTSP foi utilizado vários conteúdos existente em páginas web, comunidades e fóruns relacionados ao assunto, como as informações disponibilizadas por \citeonline{implantacao3}, \citeonline{implantacao1}, \citeonline{implantacao2}, \citeonline{morimoto2005redes}, \citeonline{implantacao4} e \citeonline{implantacao5}.
 
-O motivo de usar o Ubuntu 12.04 LTS (\textit{Long Term Support}) no servidor LTSP ao inves da versão 14.04 LTS, ocorreu pelo fato de na versão 14.04 LTS conter configurações no pacote do \textit{gnome-session} que tornam obrigatória a aceleração de \textit{hardware} em computadores que forem inicializados pela rede. Esse é o caso dos \textit{thin clients} de um servidor LTSP, algo que o \textit{Raspberry PI} não possui, tornando a versão do Ubuntu inutilizável para os testes.
+O motivo de usar o Ubuntu 12.04 LTS (\textit{Long Term Support}) no servidor LTSP ao invés da versão 14.04 LTS, ocorreu pelo fato de na versão 14.04 LTS conter configurações no pacote do \textit{gnome-session} que tornam obrigatória a aceleração de \textit{hardware} em computadores que forem inicializados pela rede. Esse é o caso dos \textit{thin clients} de um servidor LTSP, algo que o \textit{Raspberry PI} não possui, tornando a versão do Ubuntu inutilizável para os testes.
 
-Na realização dos testes, os resultados de usabilidade não foram favoráveis ao \textit{Raspberry PI} utilizando o \textit{software} BerryTerminal. Um problema encontrado no teste de usabilidade, foi impossibilidade de acessar um dispositivo de armazenamento usb, pois o próprio \textit{software} BerryTerminal não reconhece a conexão.
+Na realização dos testes, os resultados de usabilidade não foram favoráveis ao \textit{Raspberry PI} utilizando o \textit{software} BerryTerminal. Um problema encontrado no teste de usabilidade, foi impossibilidade de acessar um dispositivo de armazenamento USB, pois o próprio \textit{software} BerryTerminal não reconhece a conexão.
 
-Mas o problema que conexão o usb vai além do \textit{software}, o modelo do \textit{Raspberry PI} utilizado possui um problema de alimentação, onde dependendo do energia solicitada pelo dispositivo conectado via usb, causa uma queda de energia deligando o \textit{Raspberry PI} por instantes o que na aplicação atual desliga a conexão com o servidor.
+Mas o problema que conexão o USB vai além do \textit{software}, o modelo do \textit{Raspberry PI} utilizado possui um problema de alimentação, onde dependendo da energia solicitada pelo dispositivo conectado via USB, causa uma queda de energia deligando o \textit{Raspberry PI} por instantes o que na aplicação atual desliga a conexão com o servidor.
 
-Na utilização do computador como \textit{thin client}, foi possível acessar o dispositivo de armazenamento conectado na entrada usb, tornando possível  a transferência de dados entre o servidor e o dispositivo de armazenamento conectado no \textit{thin client}.
+Na utilização do computador como \textit{thin client}, foi possível acessar o dispositivo de armazenamento conectado na entrada USB, tornando possível  a transferência de dados entre o servidor e o dispositivo de armazenamento conectado no \textit{thin client}.
 
-Durante os testes para comparar a usabilidade do computador e \textit{Raspberry PI}, o computador desempenhou melhor o seu papel, sem nenhum tipo de \textit{delay} na renderização da tela.  Na utilização do \textit{Raspberry PI} como \textit{thin client}, foi notado alguns \textit{delay} na renderização da tela durante a execução de alguns programas como firefox, Sudoku e o gerenciador de arquivos. O delay pode ser notados durante a inicialização dos programas.
+Durante os testes para comparar a usabilidade do computador e \textit{Raspberry PI}, o computador desempenhou melhor o seu papel, sem nenhum tipo de \textit{delay} na renderização da tela.  Na utilização do \textit{Raspberry PI} como \textit{thin client}, foi notado alguns \textit{delay} na renderização da tela durante a execução de alguns programas como firefox, Sudoku e o gerenciador de arquivos. O delay pode ser notado durante a inicialização dos programas.
 
 Um ponto marcante na usabilidade, foi a execução de vídeos em \textit{stream} utilizando o navegador, onde o \textit{Raspberry PI} deixou muito a desejar, executado vídeos com poucos \textit{frames} por segundo, piorando o problema quando se reproduzia vídeos em tela cheia. Enquanto o computador desempenhou seu papel corretamente.
 
-No restante dos testes foi utiliza \textit{scripts} tanto no servidor para coletar as informações do sistema (que estão disponiveis no Apêndice \ref{script:GetDataServer}) , quanto nos clientes para a execução de programas do sistema para simular a execução de um usuário. Cada teste só é efetuado após o reinicio de todas as maquina para que testes anteriores não interfiram no resultados obtidos.
+No restante dos testes foi utiliza \textit{scripts} tanto no servidor para coletar as informações do sistema (que estão disponíveis no Apêndice \ref{script:GetDataServer}), quanto nos clientes para a execução de programas do sistema para simular a execução de um usuário. Cada teste só é efetuado após o reinicio de todas as máquinas para que testes anteriores não interfiram nos resultados obtidos.
 
-Já nos testes onde ocorreu a coleta de informações do sistema, pode se notar uma grande semelhança no utilização dos recursos do servidor, em ambos casos. A Figura \ref{fig:memoria} ilustra a quantidade de memória utilizada do servidor no momento dos testes do \textit{Raspberry PI} e do computador, ambos sendo utilizados como \textit{thin client}.
+Já nos testes onde ocorreu a coleta de informações do sistema, pode se notar uma grande semelhança na utilização dos recursos do servidor, em ambos casos. A Figura \ref{fig:memoria} ilustra a quantidade de memória utilizada do servidor no momento dos testes do \textit{Raspberry PI} e do computador, ambos sendo utilizados como \textit{thin client}.
 
 \begin{figure}[!htb]
 \centering
@@ -1485,13 +1486,13 @@ Já nos testes onde ocorreu a coleta de informações do sistema, pode se notar 
 \end{figure}
 
 
-Os dados apresentados na Figura \ref{fig:memoria} indicam que o \textit{Raspberry PI} utilizou em quase todo o período do teste uma quantidade menor de memória RAM que o computador, ambos executados nas mesmas condições. Durante a coleta desses dados utilizando o \textit{Raspberry PI}, o pico de memória foi de 751,2109 MB, enquanto o computador utilizou o teto de 798,3632 MB. Uma razoável diferença, levando em conta que o servidor antes de inciar os testes utilizava entre 561,1641 MB e 549,8554 MB. 
+Os dados apresentados na Figura \ref{fig:memoria} indicam que o \textit{Raspberry PI} utilizou em quase todo o período do teste uma quantidade menor de memória RAM que o computador, ambos executados nas mesmas condições. Durante a coleta desses dados utilizando o \textit{Raspberry PI}, o pico de memória foi de 751,2109 MB, enquanto o computador utilizou o teto de 798,3632 MB. Uma razoável diferença, levando em conta que o servidor antes de iniciar os testes utilizava entre 561,1641 MB e 549,8554 MB. 
 
 Os dados coletados sobre o  uso de CPU mostram uma alternância no período dos testes, onde o \textit{Raspberry PI} apresentou um resultado mediano em relação ao computador.
 
 \begin{figure}[!htb]
 \centering
-\caption{Procentagem da utilização da CPU do servidor durante o uso do \textit{Raspberry PI} com \textit{thin client} e do computador como \textit{thin client}}
+\caption{Porcentagem da utilização da CPU do servidor durante o uso do \textit{Raspberry PI} com \textit{thin client} e do computador como \textit{thin client}}
 \includegraphics[scale=0.8]{Imagens/cpu_2}
 \fonte{ Elaborado pelo autor}
 \label{fig:cpu}
@@ -1499,11 +1500,11 @@ Os dados coletados sobre o  uso de CPU mostram uma alternância no período dos 
 
 A figura \ref{fig:cpu} ilustra a utilização da CPU durante o período dos testes três e quatro, onde é notado uma alternância entre o computador e o \textit{Raspberry PI}, no maior uso da CPU. O que indica um equilíbrio entre as ambas partes, já que a diferença é pequena do uso da CPU do servidor solicitada pelos \textit{thin clients}  no mesmo instante do teste.
 
-A ultima informação coletada dos testes está relacionada a transferência de dados pela rede, tendo em vista que para um melhor desempenho no ambente \textit{thin client}, a rede local não pode ficar sobrecarregada. Foi coletada a quantidade de dados transferidos pela interface do servidor no instante de iniciou os testes e outra coleta após o tempo limite dos testes. Sendo assim possível verificar a quantidade de dados enviados e recebidos da interface do servidor usada para a comunicação com os \textit{thin clients}.
+A última informação coletada dos testes está relacionada a transferência de dados pela rede, tendo em vista que para um melhor desempenho no ambiente \textit{thin client}, a rede local não pode ficar sobrecarregada. Foi coletada a quantidade de dados transferidos pela interface do servidor no instante de iniciou os testes e outra coleta após o tempo limite dos testes. Sendo assim possível verificar a quantidade de dados enviados e recebidos da interface do servidor usada para a comunicação com os \textit{thin clients}.
 
 A Figura \ref{fig:net} informa a quantidade de dados enviados e recebidos durante os testes. Lembrando que esses dados foram coletados do servidor.
 
-\begin{figure}[!htb]
+\begin{figure}[!h]
 \centering
 \caption{Quantidade de dados transferidos pela rede durante o uso do \textit{Raspberry PI} com \textit{thin client} e do computador como \textit{thin client}}
 \includegraphics[scale=0.8]{Imagens/net}
@@ -1511,6 +1512,7 @@ A Figura \ref{fig:net} informa a quantidade de dados enviados e recebidos durant
 \label{fig:net}
 \end{figure}
 
+\newpage
 A Figura \ref{fig:net} apresenta bons resultados na utilização do \textit{Raspberry PI} como \textit{thin client}, necessitando apenas 14,78717136 MB de dados enviados  do servidor para executar os testes, isso é aproximadamente 53,47\% da quantidade solicitada pelo computador no modo \textit{thin client}. Os resultados continuam favoráveis ao \textit{Raspberry PI} nos dados que são enviados para o servidor, pois o ele enviou aproximadamente 65,21\% de dados que o computador.
 
 As informações apresentadas na Figura \ref{fig:net} indicam que a utilização de \textit{Raspberry PI} no ambiente \textit{thin client} torna a rede local menos congestionada, transferindo menos dados e consequentemente ocupando menos largura de banda. 
@@ -1538,17 +1540,22 @@ As informações apresentadas na Figura \ref{fig:net} indicam que a utilização
 
 \chapter{Conclusão}
 
-O \textit{Raspberry PI} modelo B usando o BerryTerminal, traz beneficios ao ambiente \textit{thin client}, como a diminuição da utilização dos recursos do servidor, a economia de energia utilzada e a economia para criação de infraestrutura de computadores. A sua utilização se enquadra no conceito mais profundo do TI verde, ou \textit{Green IT}, pois envolvendo uma nova estrutura de refrigeração e um melhor aproveitamento dos espaços físicos. 
+O \textit{Raspberry PI} modelo B usando o BerryTerminal, traz benefí	cios ao ambiente \textit{thin client}, como a diminuição da utilização dos recursos do servidor, a economia de energia utilizada e a economia para criação de infraestrutura de computadores. A sua utilização se enquadra no conceito mais profundo do TI verde, ou \textit{Green IT}, pois envolvendo uma nova estrutura de refrigeração e um melhor aproveitamento dos espaços físicos. 
 
-O \textit{Raspberry PI} como um \textit{thin client}, consome também menos memória RAM a cerca de 23,55\% que um computador com \textit{thin client}. Essa diferença em um ambiente com varias maquinas possibilita a inserção de mais \textit{Raspberrys PI} do que computadores. Além de utilizar uma quantidade menor da banda em sua rede local.
+O \textit{Raspberry PI} como um \textit{thin client}, consome também menos memória RAM a cerca de 23,55\% que um computador com \textit{thin client}. Essa diferença em um ambiente com várias maquinas possibilita a inserção de mais \textit{Raspberrys PI} do que computadores. Além de utilizar uma quantidade menor da banda em sua rede local.
 
-Nos testes executados não foi possível acessar dispositivos de armazenamento conectados via usb no \textit{Raspberry PI}, dificultando a transferência dos dados utilizados no ambiente \textit{thin client}. Uma alternativa que viabiliza essa transferência é a conexão do dispositivo no servidor, algo que não é muito aconselhado e muitas vezes não acessível aos usuários.
+Nos testes executados não foi possível acessar dispositivos de armazenamento conectados via USB no \textit{Raspberry PI}, dificultando a transferência dos dados utilizados no ambiente \textit{thin client}. Uma alternativa que viabiliza essa transferência é a conexão do dispositivo no servidor, algo que não é muito aconselhado e muitas vezes não acessível aos usuários.
 
 A usabilidade do \textit{Raspberry PI} como \textit{thin client} gerou resultados que não são motivos de elogio, já que ele teve um mal desempenho na execução de vídeos e dificuldades de na exibição da tela como a perda de algumas transições.
 
-No geral, os resultados da comparação entre o computador e o \textit{Raspberry PI}, ambos como \textit{thin client}, foram neutros já que o \textit{Raspberry PI} teve um melhor desempenho na utilização dos recursos e o computador desempenhou um ótimo papel usabilidade e na fluidez da utilização. deixando o resultado equilibrado. Mas como o \textit{Raspberry PI} possui outras vantagens, como preço e economia de energia, tando diretamente quanto indiretamente. deixando o raspberry com um saldo positivo.
+No geral, os resultados da comparação entre o computador e o \textit{Raspberry PI}, ambos como \textit{thin client}, foram neutros já que o \textit{Raspberry PI} teve um melhor desempenho na utilização dos recursos e o computador desempenhou um ótimo papel usabilidade e na fluidez da utilização. Deixando o resultado equilibrado. Mas como o \textit{Raspberry PI} possui outras vantagens, como preço e a economia de energia, tanto diretamente quanto indiretamente. Deixando o \textit{Raspberry PI} com um saldo positivo.
 
 Então é correto afirmar que o \textit{Raspberry PI} é uma boa opção de \textit{thin client}, mas vale ressaltar que é preciso verificar qual a finalidade do ambiente \textit{thin client}, pois o \textit{Raspberry PI} com o BerryTerminal não é aconselhado em ambientes onde ocorre edição de vídeos ou imagens. Mas altamente recomentado em ambientes onde se utiliza nuvens para o armazenamento dos dados.
+
+Para a obtenção de resultados mais precisos, é necessário avançar com a pesquisa produzindo outros testes com diferentes modelos de \textit{Raspberry PI} para verificar se os problemas encontrados, estão presentes apenas no modelo usado, ou não. Também buscar outros softwares que permitam que o \textit{Raspberry PI} seja um \textit{thin client}, semelhante ao que o BerryTerminal faz.
+
+Outro projeto interessante é, verificar a quantidade de \textit{thin clients} suportando por uma rede local utilizando o cabo RJ-45. Ou realização de testes para determinar o desempenho de uma thin client a grande distância, determinado até que distancia o Raspberry PI como thin client traz bons resultados.  
+
 
 
 
@@ -1704,9 +1711,7 @@ end_time=`date -d "10/19/2015 23:51" +%s`
 if [[ $EUID -ne 0 ]]; then
     echo "This script must be run as root" #1>&2
 else
-
 	echo "wait.."
-
 	bash collect_data_memory.sh & #start collection
 	aux=$(cat exec.wa)
 	pid_memory=`expr $aux - 2`
@@ -1746,7 +1751,6 @@ else
 	end_RX=$(ifconfig eth0 | grep 'bytes'| awk -F "(:|\()" '{print $2}') #transfer net
 	end_TX=$(ifconfig eth0 | grep 'bytes'| awk -F "(:|\()" '{print $4}') #transfer net
 
-
 	#solution data (net)
 	net_RX=`expr $end_RX - $start_RX`
 	net_TX=`expr $end_TX - $start_TX`
@@ -1756,7 +1760,6 @@ else
 	$start_memory
 	memory_used=(`python -c "print (max([float(line.rstrip('\n'))\
 	 for line in open('test_memory')]) - float($start_memory))/1024"`)
-
 
 	#solution data (CPU)
 	cpu_used=0
@@ -1782,7 +1785,6 @@ collect_data_cpu.sh
 file='cpu'
 
 if [ -a $file ]; then rm $file; fi
-
 (echo $BASHPID)>exec.wa
 
 while (cat <(grep 'cpu ' /proc/stat) <(sleep 1 && grep 'cpu ' /proc/stat) |\
@@ -1800,10 +1802,7 @@ collect_data_memory.sh
 
 file='memory'
 
-if [ -a $file ]; then
-	rm $file
-fi 
-
+if [ -a $file ]; then rm $file; fi 
 (echo $BASHPID)>exec.wa
 
 while (free -kt | grep Mem | awk '{print expr ($3 - ($6 + $7))}')>>$file; do 
@@ -1823,7 +1822,8 @@ ltsp_client.sh
 #!/bin/bash
 
 arr=("firefox" "libreoffice --writer" "rhythmbox" "libreoffice --calc"\
- "/usr/games/gnome-sudoku" "libreoffice --draw" "libreoffice --calc" "/usr/games/sol"); 
+ "/usr/games/gnome-sudoku" "libreoffice --draw" "libreoffice --calc"\
+ "/usr/games/sol"); 
 
 temp=(3 5 2 6 1 0 4 3 2 8 4 1 4 5 1 6 3 1 6 7 3 1 5 2 5);
 
@@ -1831,7 +1831,6 @@ n=`expr ${#arr[@]} - 1`
 
 start_time=`date -d "10/19/2015 23:50" +%s`
 end_time=`date -d "10/19/2015 23:51" +%s`
-
 
 sleep $(expr $start_time - `date +%s`) #start time to script
 
@@ -1863,14 +1862,14 @@ done
 % ---
 % Inicia os anexos
 % ---
-\begin{anexosenv}
+%\begin{anexosenv}
 
 % Imprime uma página indicando o início dos anexos
-\partanexos
+%\partanexos
 
 % ---
 
-\end{anexosenv}
+%\end{anexosenv}
 
 %---------------------------------------------------------------------
 % INDICE REMISSIVO
