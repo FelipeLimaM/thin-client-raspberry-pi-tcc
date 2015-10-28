@@ -12,12 +12,12 @@ else
 
 	echo "wait.."
 
-	bash run_memory_data_collect.sh & #start collection
+	bash collect_data_memory.sh & #start collection
 	aux=$(cat exec.wa)
 	pid_memory=`expr $aux - 2`
 	echo "pid_memory $pid_memory"
 
-	bash run_cpu_data_collect.sh & #start collection
+	bash collect_data_cpu.sh & #start collection
 	aux=$(cat exec.wa)
 	pid_cpu=`expr $aux - 2`
 	echo "pid_cpu $pid_cpu"
