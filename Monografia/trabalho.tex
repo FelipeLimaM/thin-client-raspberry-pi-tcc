@@ -84,7 +84,7 @@
 \tipotrabalho{Trabalho de Conclusão de Curso em Ciência da Computação}
 % O preambulo deve conter o tipo do trabalho, o objetivo, 
 % o nome da instituição e a área de concentração 
-\preambulo{Este exemplar corresponde à redação final da monografia da disciplina Projeto Final de Curso devidamente corrigida e   defendida por \imprimirautor e aprovada pela Banca Examinadora, como parte dos requisitos para a obtenção do título de Bacharel em Ciência da Computação.}
+\preambulo{Este exemplar corresponde à redação final da monografia da disciplina Projeto Final de Curso devidamente corrigida e   defendida por \imprimirautor \ e aprovada pela Banca Examinadora, como parte dos requisitos para a obtenção do título de Bacharel em Ciência da Computação.}
 % ---
 
 
@@ -1086,7 +1086,7 @@ Possui o propósito de entrada e saída de corrente (GPIO). Eles são um conjunt
 
 \end{description}
 
-Existem cinco modelos de \textit{Raspberry PI}, e a cada modelo lançado, o produto é aprimorado, sendo que a última versão lançada pode executar quase todas distribuições ARM GNU/\textit{Linux}, incluindo Ubuntu Snappy Core, e também o Microsoft Windows 10 \cite{raspberrypi.org}. Nas tabelas de \ref{tab:raspberry_inicio} a \ref{tab:raspberry_fim} apresentam os modelos produzidos comercialmente:
+Existem cinco modelos de \textit{Raspberry PI}, e a cada modelo lançado, o produto é aprimorado, sendo que a última versão lançada pode executar quase todas distribuições ARM GNU/\textit{Linux}, incluindo Ubuntu Snappy Core, e também o Microsoft Windows 10 \cite{raspberrypi.org}. Nas \textbf{Tabelas de \ref{tab:raspberry_inicio}} a \textbf{\ref{tab:raspberry_fim}} apresentam os modelos produzidos comercialmente:
 
 
 
@@ -1250,7 +1250,7 @@ As utilidades do \textit{Raspberry PI} têm se multiplicado, possibilitando dese
 
 \item[Automação de casas] Possibilita ligar e desligar as luzes remotamente ou qualquer outro objeto ligado a casa por meio do \textit{Raspberry PI}, que também dá o acesso para outros dispositivos o controlarem também \cite{AplicacaoRaspberry}.
 
-\item[Servidor web pessoal] O \textit{Raspberry PI} pode ser ligado à internet, e ser usado como um servidor web, com um consumo de energia bem menor.
+\item[Servidor web pessoal] O \textit{Raspberry PI} pode ser ligado à internet, e usado como um servidor web, com um consumo de energia bem menor.
 
 
 \item[Câmera Pi - Câmera  DSLR com computador embutido] Incorpora um \textit{Raspberry PI} em uma câmera DSLR (\textit{Digital Single-Lens Reflex}), permitindo que um fotógrafo transmita para um PC ou \textit{tablet}, as imagens capturas, sendo que o controle remoto da câmera pode ser através de um \textit{smartphone}, de qualquer lugar do mundo. Também permite programar a câmera para tirar fotos em intervalos precisos \cite{cameraPI}.
@@ -1454,7 +1454,7 @@ Já nos testes onde ocorreu a coleta de informações do sistema, existe uma gra
 \end{figure}
 
 
-Os dados apresentados na \textit{Figura \ref{fig:memoria}} indicam que o \textit{Raspberry PI} utilizou em quase todo o período do teste uma quantidade menor de memória RAM que o computador, ambos executados nas mesmas condições. Durante a coleta desses dados utilizando o \textit{Raspberry PI}, o pico de memória foi de 751,2109 MB, enquanto o computador utilizou o teto de 798,3632 MB. Uma razoável diferença, levando em conta que o servidor antes de iniciar os testes utilizava entre 561,1641 MB e 549,8554 MB. 
+Os dados apresentados na \textbf{Figura \ref{fig:memoria}} indicam que o \textit{Raspberry PI} utilizou em quase todo o período do teste uma quantidade menor de memória RAM que o computador, ambos executados nas mesmas condições. Durante a coleta desses dados utilizando o \textit{Raspberry PI}, o pico de memória foi de 751,2109 MB, enquanto o computador utilizou o teto de 798,3632 MB. Uma pequena diferença, levando em conta que o servidor antes de iniciar os testes utilizava entre 561,1641 MB e 549,8554 MB. 
 
 \begin{figure}[!htb]
 \centering
@@ -1464,7 +1464,7 @@ Os dados apresentados na \textit{Figura \ref{fig:memoria}} indicam que o \textit
 \label{fig:cpu}
 \end{figure}
 
-A \textbf{figura \ref{fig:cpu}} ilustra a utilização da CPU durante o período dos testes três e quatro, onde é notado uma alternância entre o computador e o \textit{Raspberry PI}, no maior uso da CPU. O que indica uma equivalência entre as ambas partes, já que a diferença é pequena do uso da CPU do servidor solicitada pelos \textit{thin clients}  no mesmo instante do teste.
+A \textbf{Figura \ref{fig:cpu}} ilustra a utilização da CPU durante o período dos testes três e quatro, onde é notado uma alternância entre o computador e o \textit{Raspberry PI}, no maior uso da CPU. O que indica uma equivalência entre as ambas partes, já que a diferença é pequena do uso da CPU do servidor solicitada pelos \textit{thin clients}  no mesmo instante do teste.
 
 A última informação coletada dos testes está relacionada a transferência de dados pela rede, tendo em vista que para um melhor desempenho no ambiente \textit{thin client}, a rede local não pode ficar sobrecarregada. Foi coletada a quantidade de dados transferidos pela interface do servidor no instante de iniciou os testes e outra coleta após o tempo limite dos testes. Sendo assim possível verificar a quantidade de dados enviados e recebidos da interface do servidor usada para a comunicação com os \textit{thin clients}.
 
@@ -1479,9 +1479,9 @@ A \textbf{Figura \ref{fig:net}} informa a quantidade de dados enviados e recebid
 \end{figure}
 
 \newpage
-A \textbf{Figura \ref{fig:net}} apresenta bons resultados na utilização do \textit{Raspberry PI} como \textit{thin client}, necessitando de 14,78717136 MB de dados enviados do servidor para executar os testes, isso é aproximadamente 53,47\% da quantidade solicitada pelo computador no modo \textit{thin client}. Os resultados continuam favoráveis ao \textit{Raspberry PI} nos dados que são enviados para o servidor, pois o ele enviou aproximadamente 65,21\% de dados que o computador.
+A \textbf{Figura \ref{fig:net}} apresenta os resultados na utilização do \textit{Raspberry PI} como \textit{thin client}, onde necessitou de 14,78717136 MB de dados enviados do servidor para executar os testes, isso é aproximadamente 53,47\% da quantidade solicitada pelo computador no modo \textit{thin client}. Os resultados continuam favoráveis ao \textit{Raspberry PI} nos dados que são enviados para o servidor, pois o ele enviou aproximadamente 65,21\% de dados que o computador.
 
-As informações apresentadas na Figura \ref{fig:net} indicam que a utilização de \textit{Raspberry PI} no ambiente \textit{thin client} torna a rede local menos congestionada, transferindo menos dados e consequentemente ocupando menos largura de banda. 
+As informações apresentadas na \textbf{Figura \ref{fig:net}} indicam que a utilização de \textit{Raspberry PI} no ambiente \textit{thin client} torna a rede local menos congestionada, transferindo menos dados e consequentemente ocupando menos largura de banda. Mas isso ocorre pelo fato do \textit{Raspberry PI} apresentar uma baixa usabilidade durante os teste, com isso ouve um numero menor de frames transferidos pela rede. 
 
 
 % -----------------------------------------------------------------------------------------------------------
@@ -1508,7 +1508,7 @@ As informações apresentadas na Figura \ref{fig:net} indicam que a utilização
 
 O \textit{Raspberry PI} modelo B usando o BerryTerminal, traz benefícios ao ambiente \textit{thin client}, como a diminuição da utilização dos recursos do servidor, a economia de energia utilizada e a economia para criação de infraestrutura de computadores. A sua utilização se enquadra no conceito de TI verde, ou \textit{Green IT}, pois envolvendo uma nova estrutura de refrigeração e um melhor aproveitamento dos espaços físicos. 
 
-O \textit{Raspberry PI} como um \textit{thin client}, consome também menos memória RAM cerca de 23,55\% que um computador com \textit{thin client}. Essa diferença em um ambiente com várias maquinas possibilita a inserção de mais \textit{Raspberrys PI} do que computadores. Além de utilizar uma quantidade menor da banda em sua rede local.
+O \textit{Raspberry PI} como um \textit{thin client}, nos teste consumiu cerca de 6,27\% menos memória RAM que um computador com \textit{thin client}. Essa diferença em um ambiente com várias maquinas, talvez possibilita talvez a inserção de mais \textit{Raspberrys PI} do que computadores. Além de utilizar uma quantidade menor da banda em sua rede local devido ao déficit na usabilidade.
 
 Nos testes executados não foi possível acessar dispositivos de armazenamento conectados via USB no \textit{Raspberry PI}, impossibilitando a transferência dos dados utilizados no ambiente \textit{thin client}. Uma alternativa que viabiliza essa transferência é a conexão do dispositivo no servidor, algo incomum pois na maioria das vezes não é acessível aos usuários.
 
