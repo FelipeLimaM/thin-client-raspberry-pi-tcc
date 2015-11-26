@@ -84,14 +84,9 @@
 \tipotrabalho{Trabalho de Conclusão de Curso em Ciência da Computação}
 % O preambulo deve conter o tipo do trabalho, o objetivo, 
 % o nome da instituição e a área de concentração 
-\preambulo{Este  exemplar  corresponde  à  redação  final da
-monografia da disciplina Projeto Final de
-Curso devidamente corrigida e defendida
-por \imprimirautor \  e aprovada pela
-Banca  Examinadora, como parte dos
-requisitos para a obtenção do título de
-Bacharel em Ciência da Computação.}
+\preambulo{Este exemplar corresponde à redação final da monografia da disciplina Projeto Final de Curso devidamente corrigida e   defendida por \imprimirautor e aprovada pela Banca Examinadora, como parte dos requisitos para a obtenção do título de Bacharel em Ciência da Computação.}
 % ---
+
 
 
 % ---
@@ -138,10 +133,10 @@ Bacharel em Ciência da Computação.}
 	
 
 	\begin{tabular}{@{}c@{}}
-	\toprule
-	Curso de Ciência da Computação            \\
-	\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Universidade Estadual de Mato Grosso do Sul\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  \\ \bottomrule
-	\end{tabular}
+          \toprule
+          Curso de Ciência da Computação            \\
+          \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Universidade Estadual de Mato Grosso do Sul\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  \\ \bottomrule
+          \end{tabular}
 
 	
 	
@@ -157,13 +152,8 @@ Bacharel em Ciência da Computação.}
 	\vspace*{\fill}
 	\imprimirorientador
 	\\
-	\vspace*{\fill}
-	{\large Curso de Ciência da Computação}
-	
-	Universidade Estadual de Mato Grosso do Sul
-	\\
-	\vspace*{\fill}
-	
+	\vspace*{7cm}
+		
 	\large\imprimirlocal \\
 	\large\imprimirdata
 	\vspace*{1cm}
@@ -177,7 +167,7 @@ Bacharel em Ciência da Computação.}
 \renewcommand{\folhaderostocontent}{
 \begin{center}
 {\ABNTEXchapterfont\bfseries\Large\imprimirtitulo}
-\vspace*{\fill}\vspace*{\fill}
+\vspace*{1cm}\vspace*{\fill}
 \begin{center}
 \Large\imprimirautor
 \end{center}
@@ -210,6 +200,11 @@ Bacharel em Ciência da Computação.}
 \vspace*{1cm}
 \end{center}
 }
+
+
+
+
+
 \makeatother
 
 
@@ -246,9 +241,42 @@ Bacharel em Ciência da Computação.}
 \imprimircapa %default antex2 
 
 
+\begin{folhadeaprovacao}
+        \begin{center}
+          \center
+          \begin{tabular}{@{}c@{}}
+          \toprule
+          Curso de Ciência da Computação            \\
+          \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Universidade Estadual de Mato Grosso do Sul\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  \\ \bottomrule
+          \end{tabular}
+          \vspace*{1cm}
+          \begin{center}
+              \ABNTEXchapterfont\bfseries\LARGE\imprimirtitulo
+          \end{center}
+          \vspace*{1cm}
+          {\large \imprimirautor}
+          \\
+          \vspace*{1cm}
+          Novembro de 2015
+          \vspace*{\fill}
+        \end{center}
 
+          \textbf{Banca Examinadora:}
 
+          \imprimirorientador \  (Orientador)
 
+          Área de Computação - UEMS
+          \vspace*{0.5cm}
+
+          Prof. Dr. Ricardo Luís Lachi
+
+          Área de Computação - UEMS
+          \vspace*{0.5cm}
+
+          Prof. Dr. Nilton Cézar de Paula
+
+          Área de Computação - UEMS
+    \end{folhadeaprovacao}
 % ---
 
 % ---
@@ -387,7 +415,7 @@ Meu agradecimento ao Fabrício Sérgio de Paula, por ser meu orientador, me esti
 
 Meus agradecimentos aos amigos Calebe Paes, Gabriel de Biasi, Larissa Mendes, Rodolpho Pivetta Sabino e todos companheiros do SweetRice, irmão na amizade que fizeram parte da minha formação e que vão continuar presentes em minha vida com certeza.
 
-Meu agradecimento ao Jean Barbosa Siqueira, pela grande ajuda no desenvolvimento, auxiliando e orientando em todas as dificuldades encontradas pelo caminho. 
+Meu agradecimento ao Jean Barbosa Siqueira, pela grande ajuda no desenvolvimento, auxiliando em todas as dificuldades encontradas pelo caminho. 
 
  
 
@@ -640,7 +668,7 @@ O LTSP funciona em servidores \textit{Linux}, sendo uma solução flexível, de 
 
 DRBL ou \textit{Diskless Remote Boot in Linux}, fornece um ambiente semelhante ao LTSP. Esse \textit{software} funciona em distribuições Debian, Ubuntu, Red Hat, Fedora, CentOS e SuSE. O DRBL utiliza recursos de \textit{hardware} distribuídos, o que torna possível aos clientes terem acesso total ao \textit{hardware} local \cite{drbl}.
 
-O DRBL usa PXE/\textit{etherboot}\footnote{É um \textit{boot} remoto desenvolvido pela Intel, gravado na ROM da placa de rede que permite que sejam inicializados através da rede, carregando todo o \textit{software} necessário a partir de um servidor previamente configurado \cite{pxe}.}, NFS e NIS\footnote{É um serviço desenvolvido pela SUN para a distribuir informação pela rede \cite{nis}.} (\textit{Network Information Service}) em seu funcionamento, não sendo necessário instalar o sistema operacional GNU/\textit{Linux} diretamente no disco rígido de cada cliente na rede, pois o disco rígido é opcional. Se um disco rígido estiver presente, o DRBL pode fazer uso dele como uma memória de SWAP\footnote{É a memória virtual que funciona como uma extensão da memória RAM, que fica armazenada no disco.} \cite{drbl,piaui,Frank.drbl}.
+O DRBL usa PXE/\textit{etherboot}\footnote{É um \textit{boot} remoto desenvolvido pela Intel, gravado na ROM da placa de rede que permite que sejam inicializados através da rede, carregando todo o \textit{software} necessário a partir de um servidor previamente configurado \cite{pxe}.}, NFS e NIS\footnote{É um serviço desenvolvido para distribuir informação pela rede \cite{nis}.} (\textit{Network Information Service}) em seu funcionamento, não sendo necessário instalar o sistema operacional GNU/\textit{Linux} diretamente no disco rígido de cada cliente na rede, pois o disco rígido é opcional. Se um disco rígido estiver presente, o DRBL pode fazer uso dele como uma memória de SWAP\footnote{É a memória virtual que funciona como uma extensão da memória RAM, que fica armazenada no disco.} \cite{drbl,piaui,Frank.drbl}.
 
 No DRBL outros sistemas operacionais instalados (localmente) nos clientes DRBL, não serão afetados. Isto pode ser útil, por exemplo, durante uma implementação do ambiente \textit{thin client}, onde os usuários ainda possuem a opção de iniciar o sistema local e executar algumas aplicações disponíveis dentro do sistema local. O DRBL permite essa grande flexibilidade em sua implantação \cite{drbl}.
 
@@ -657,7 +685,7 @@ O Thinstation roda em \textit{hardware} PC comum (classe i686 32/64 bits) e pode
 
 \subsection{Produtos}
 
-No Brasil existe a empresa Thin Client Brasil, uma revendedora licenciada para a venda de aparelho de \textit{thin client}. O \textit{site} possui alguns modelos, todos sem a descrição do valor, mas foi feito contato com a empresa e com isso forneceram uma lista com todos os preços e vários arquivos com a descrição de cada produto. As Tabelas de \ref{tab:incial_thin_client_brasil} a \ref{tab:final_thin_client_brasil} mostram informações sobre os produtos.
+No Brasil existe a empresa Thin Client Brasil, uma revendedora licenciada para a venda de aparelho de \textit{thin client}. O \textit{site} possui alguns modelos, todos sem a descrição do valor, mas foi feito contato com a empresa e com isso forneceram uma lista com todos os preços e vários arquivos com a descrição de cada produto. As \textbf{Tabelas de \ref{tab:incial_thin_client_brasil}} a \textbf{\ref{tab:final_thin_client_brasil}} mostram informações sobre os produtos.
 
  
 
@@ -772,60 +800,6 @@ Valor		 		&R\$ 510,00												\\ \hline
 \begin{table}
 \IBGEtab{%
 
-
-	\caption{Especificação do modelo NC630}%
-}{%
-\begin{tabular}{ll}\hline
-\multicolumn{2}{l}{\textbf{Especificação}}          						\\ \hline
-Processador			&ARM11 800MHz											\\
-RAM					&128MB													\\
-Chip Gráfico		&--														\\
-Saída de vídeo		&--														\\
-Dimensões			&12cm x 17cm x 3cm										\\
-Peso				&~200g													\\
-Portas USB 			&3														\\
-Saída de áudio 		&2 P2 (input e output)									\\
-Porta de rede 		&RJ-45													\\
-Valor		 		&R\$ 440,00												\\ \hline 			
-\end{tabular}
-}{
-	\fonte{\cite{thinclientbrasil}}%
-	%\nota{}%
-	%\nota[]{}%
-}
-\end{table}
-
-
-\begin{table}
-\IBGEtab{%
-	\caption{Especificação do modelo NC630W}%
-
-}{%
-\begin{tabular}{ll}\hline
-\multicolumn{2}{l}{\textbf{Especificação}}          						\\ \hline
-Processador			&ARM11 800MHz											\\
-RAM					&128MB													\\
-Chip Gráfico		&--														\\
-Saída de vídeo		&--														\\
-Dimensões			&12cm x 17cm x 3cm										\\
-Peso				&~200g													\\
-Portas USB 			&3														\\
-Saída de áudio 		&2 P2 (input e output)									\\
-Porta de rede 		&RJ-45 , Wireless(3dbi)									\\
-Valor		 		&R\$ 510,00												\\ \hline 			
-	
-\end{tabular}
-}{
-	\fonte{\cite{thinclientbrasil}}%
-	%\nota{}%
-	%\nota[]{}%
-}
-\end{table}
-
-
-\begin{table}
-\IBGEtab{%
-
 \caption{Especificação do modelo TCBR100}%
 \label{tab:final_thin_client_brasil}
 
@@ -851,8 +825,9 @@ Valor		 		&R\$ 510,00												\\ \hline
 }
 \end{table}
 
+Os modelos apresentados, possuem características semelhantes, apesar do preço variar mais que as características. É importante ressaltar que esses valores foram obtidos de apenas uma loja, onde facilita a comparação entre os preços e as especificações.
 
-Na busca por mais modelos, foram encontradas algumas lojas que revendem esse tipo de aparelho individualmente no Brasil. Existem outras que vendem produtos em forma de pacote, mas foge do foco do trabalho. Os produtos encontrados estão descritos nas Tabelas \ref{tab:thi_cleint_outros1}, \ref{tab:thi_cleint_outros2} e \ref{tab:thi_cleint_outros3}.
+Na busca por mais modelos, foram encontradas algumas lojas que revendem esse tipo de aparelho individualmente no Brasil. Existem outras que vendem produtos em forma de pacote, mas foge do foco do trabalho. Os produtos encontrados estão descritos nas \textbf{Tabelas \ref{tab:thi_cleint_outros1}}, \textbf{\ref{tab:thi_cleint_outros2}} e \textbf{\ref{tab:thi_cleint_outros3}}.
 
 \begin{table}
 \IBGEtab{%
@@ -950,7 +925,9 @@ Valor		 		&R\$ 420,00												\\ \hline
 
 
 
-%pesquisar em \href{http://www.supera.ind.br/#!thin-client/c1ia1}{entrar aki}
+\chapter*{}
+Nas \textbf{Tabelas \ref{tab:thi_cleint_outros1}}, \textbf{\ref{tab:thi_cleint_outros2}} e \textbf{\ref{tab:thi_cleint_outros3}}, é possível analisar uma discrepância muito grande em relação aos valores, como no caso da \textbf{Tabela \ref{tab:thi_cleint_outros1}}, que apresenta o aparelho \textit{thin client} com uma configuração equivalente a um desktop de bom sdesempenho, enquanto os demais possui apenas configurações essenciais para seu funcionamento.
+	
 \subsection{Aplicações}
 
 A maioria dos recursos computacionais em sistemas \textit{desktop} não é plenamente aproveitada. A tecnologia \textit{thin client} é uma solução que otimiza o funcionamento do servidor, diminuindo o tempo que o computador permanece ocioso, minimizando a subutilização de seus recursos \cite{thinclientbrasil}. 
